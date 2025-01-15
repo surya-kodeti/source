@@ -1,4 +1,2 @@
 site_name: My Documentation Site
-theme:
-  name: material  # Optional: Use the Material theme
 site_url: https://surya-kodeti.github.io/source  # Replace with your GitHub Pages URL
