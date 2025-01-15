@@ -1,28 +1,34 @@
-name: ci 
+name: Deploy MkDocs Site to GitHub Pages
+
 on:
   push:
     branches:
-      - feature/github_action_poc
+      - feature/github_action_poc  # Trigger deployment on changes to the main branch
+  workflow_dispatch:  # Allow manual deployment trigger
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+      # Step 1: Check Out Repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set Up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+
+      # Step 3: Install MkDocs and Material Theme
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+
+      # Step 4: Deploy to GitHub Pages
+      - name: Deploy MkDocs Site
+        run: mkdocs gh-deploy --force
