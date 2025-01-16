@@ -6,7 +6,7 @@ on:
       repo_urls:
         description: "Comma-separated list of GitHub repository URLs"
         required: true
-        default: "https://github.com/docsifyjs/docsify.git"
+        default: "https://github.com/docsifyjs/docsify.git,https://github.com/opencv/opencv.git"
 
 jobs:
   update-mkdocs:
