@@ -1,0 +1,73 @@
+name: Pull Markdown Files and Update MkDocs
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_urls:
+        description: "Comma-separated list of GitHub repository URLs"
+        required: true
+        default: "https://github.com/docsifyjs/docsify.git"
+
+jobs:
+  update-mkdocs:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Parse and Process Repository URLs
+      - name: Parse Repository URLs
+        run: |
+          REPO_URLS="${{ github.event.inputs.repo_urls }}"
+          echo "Processing the following repositories:"
+          echo "$REPO_URLS" | tr ',' '\n'
+          echo "$REPO_URLS" > repo_list.txt
+
+      # Step 2: Checkout the mkdocs_server Branch
+      - name: Checkout mkdocs_server Branch
+        uses: actions/checkout@v3
+        with:
+          ref: mkdocs_server
+          token: ${{ secrets.REMOTE_REPO_TOKEN }}
+          path: remote-repo
+
+      # Step 3: Clone, Extract, and Copy Markdown Files for Each Repository
+      - name: Process Each Repository
+        run: |
+          while read -r REPO_URL; do
+            if [ -z "$REPO_URL" ]; then continue; fi
+
+            # Extract repo name
+            REPO_NAME=$(basename -s .git "$REPO_URL")
+            echo "Cloning repository: $REPO_URL"
+            git clone "$REPO_URL" $REPO_NAME
+
+            # Define target folder for the current repository
+            TARGET_FOLDER="remote-repo/docs/${REPO_NAME}_docs"
+
+            # Check or create the target folder
+            if [ ! -d "$TARGET_FOLDER" ]; then
+              echo "Creating folder $TARGET_FOLDER..."
+              mkdir -p "$TARGET_FOLDER"
+            else
+              echo "Folder $TARGET_FOLDER already exists. Using it."
+            fi
+
+            # Copy Markdown files
+            echo "Finding Markdown files in $REPO_NAME..."
+            find "$REPO_NAME" -name "*.md" -exec cp --parents {} "$TARGET_FOLDER/" \;
+
+            echo "Markdown files from $REPO_NAME stored in $TARGET_FOLDER."
+          done < repo_list.txt
+
+      # Step 4: Commit and Push Changes to mkdocs_server Branch
+      - name: Commit and Push Changes
+        run: |
+          cd remote-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update Markdown files from given repositories"
+            git push origin mkdocs_server
+          fi
