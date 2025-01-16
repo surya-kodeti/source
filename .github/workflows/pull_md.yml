@@ -18,8 +18,8 @@ jobs:
         run: |
           REPO_URLS="${{ github.event.inputs.repo_urls }}"
           echo "Processing the following repositories:"
-          echo "$REPO_URLS" | tr ',' '\n'
-          echo "$REPO_URLS" > repo_list.txt
+          echo "$REPO_URLS" | tr ',' '\n' > repo_list.txt
+          cat repo_list.txt
 
       # Step 2: Checkout the mkdocs_server Branch
       - name: Checkout mkdocs_server Branch
@@ -38,7 +38,7 @@ jobs:
             # Extract repo name
             REPO_NAME=$(basename -s .git "$REPO_URL")
             echo "Cloning repository: $REPO_URL"
-            git clone "$REPO_URL" $REPO_NAME
+            git clone "$REPO_URL" "$REPO_NAME"
 
             # Define target folder for the current repository
             TARGET_FOLDER="remote-repo/docs/${REPO_NAME}_docs"
