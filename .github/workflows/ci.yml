@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: 3.x
 
-      # Step 3: Install MkDocs and Material Theme
+      # Step 3: Install MkDocs and Dependencies
       - name: Install Dependencies
         run: |
           pip install mkdocs mkdocs-material pyyaml
@@ -33,6 +33,15 @@ jobs:
       - name: Generate Navigation
         run: python generate_nav.py
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 5: Commit Updated mkdocs.yml
+      - name: Commit Updated mkdocs.yml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mkdocs.yml
+          git commit -m "Update mkdocs.yml with dynamic navigation" || echo "No changes to commit"
+          git push origin mkdocs_server
+
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy MkDocs Site
         run: mkdocs gh-deploy --force
