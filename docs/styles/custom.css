@@ -19,6 +19,12 @@
   padding: 5px 15px;
 }
 
+.md-header__title img {
+  max-height: 80px; /* Adjust size as needed */
+  width: auto;
+  margin-right: 10px; /* Space between logo and title */
+}
+
 /* Footer customization */
 .md-footer {
   background-color: #016FD0;
