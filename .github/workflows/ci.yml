@@ -29,6 +29,10 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material pyyaml
 
-      # Step 4: Deploy to GitHub Pages
+      # Step 4: Generate Navigation
+      - name: Generate Navigation
+        run: python generate_nav.py
+
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy MkDocs Site
         run: mkdocs gh-deploy --force
