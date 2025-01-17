@@ -1,4 +1,4 @@
-site_name: My Documentation Site
+site_name: Documentation Portal
 site_url: https://surya-kodeti.github.io/source
 theme:
   name: material
@@ -6,6 +6,7 @@ theme:
     primary: blue
     accent: white
     scheme: default
+  logo: images/amex.png
 extra_css:
 - styles/custom.css
 plugins:
