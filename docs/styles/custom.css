@@ -20,9 +20,9 @@
 }
 
 .md-header__title img {
-  max-height: 80px; /* Adjust size as needed */
+  max-height: 100px;
   width: auto;
-  margin-right: 10px; /* Space between logo and title */
+  margin-right: 10px;
 }
 
 /* Footer customization */
