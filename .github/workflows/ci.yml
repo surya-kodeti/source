@@ -3,7 +3,7 @@ name: Deploy MkDocs Site to GitHub Pages
 on:
   push:
     branches:
-      - mkdocs_server  # Trigger deployment on changes to the main branch
+      - mkdocs_server  # Trigger deployment on changes to the mkdocs_server branch
   workflow_dispatch:  # Allow manual deployment trigger
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       # Step 3: Install MkDocs and Material Theme
       - name: Install Dependencies
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material pyyaml
 
       # Step 4: Deploy to GitHub Pages
       - name: Deploy MkDocs Site
