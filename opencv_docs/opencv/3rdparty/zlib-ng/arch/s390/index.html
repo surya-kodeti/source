@@ -1,0 +1,5110 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://surya-kodeti.github.io/source/opencv_docs/opencv/3rdparty/zlib-ng/arch/s390/">
+      
+      
+        <link rel="prev" href="../riscv/">
+      
+      
+        <link rel="next" href="../../../../apps/opencv_stitching_tool/">
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Introduction - Documentation Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../styles/custom.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Documentation Portal" class="md-header__button md-logo" aria-label="Documentation Portal" data-md-component="logo">
+      
+  <img src="../../../../../../images/amex.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Documentation Portal" class="md-nav__button md-logo" aria-label="Documentation Portal" data-md-component="logo">
+      
+  <img src="../../../../../../images/amex.png" alt="logo">
+
+    </a>
+    Documentation Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create shared react context docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Create shared react context docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create shared react context
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Create shared react context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../create-shared-react-context_docs/create-shared-react-context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../create-shared-react-context_docs/create-shared-react-context/CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CHANGELOG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../create-shared-react-context_docs/create-shared-react-context/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CODE OF CONDUCT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../create-shared-react-context_docs/create-shared-react-context/CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to create-shared-react-context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../create-shared-react-context_docs/create-shared-react-context/SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SECURITY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docsify docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Docsify docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docsify
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docsify
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.13.0 (2022-10-26)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/HISTORY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HISTORY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_6" id="__nav_3_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docsify
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/_coverpage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     coverpage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/_navbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     navbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/_sidebar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     sidebar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/adding-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/cdn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CDN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/cover/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cover
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/custom-navbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom navbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/embed-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embed files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emoji
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doc helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/language-highlight/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language highlighting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/pwa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/ui-kit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ui kit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/write-a-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Write a plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_6_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_6_23" id="__nav_3_1_6_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     media
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_6_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_6_23">
+            <span class="md-nav__icon md-icon"></span>
+             media
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/_media/example-with-yaml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example with yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/docs/_media/example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_7" id="__nav_3_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../docsify_docs/docsify/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docsify Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONTRIBUTING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3rdparty
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            3rdparty
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_1" id="__nav_4_1_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Carotene
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Carotene
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../carotene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_2" id="__nav_4_1_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cpufeatures
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cpufeatures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cpufeatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_3" id="__nav_4_1_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flatbuffers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flatbuffers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flatbuffers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_4" id="__nav_4_1_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Libjpeg turbo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Libjpeg turbo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libjpeg-turbo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libjpeg-turbo/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    libjpeg-turbo Licenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_5" id="__nav_4_1_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Libtiff
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Libtiff
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libtiff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_6" id="__nav_4_1_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openjpeg
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Openjpeg
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openjpeg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OPENJPEG Library and Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openjpeg/AUTHORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authors of OpenJPEG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openjpeg/CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openjpeg/THANKS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenJPEG THANKS file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_7" id="__nav_4_1_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openvx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Openvx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openvx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++ wrappers for OpenVX-1.x C API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_7_2" id="__nav_4_1_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openvx/hal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenVX-based HAL implementation.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_8" id="__nav_4_1_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protobuf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Protobuf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../protobuf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9" id="__nav_4_1_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zlib ng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Zlib ng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LICENSE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3" id="__nav_4_1_4_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_4_9_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Arch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3_1" id="__nav_4_1_4_9_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Riscv
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_4_9_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Riscv
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riscv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building RISC-V Target with Cmake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3_2" id="__nav_4_1_4_9_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    S390
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_4_9_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            S390
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5_1" id="__nav_4_1_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv stitching tool
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv stitching tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../apps/opencv_stitching_tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/opencv-logo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opencv logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2" id="__nav_4_1_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1" id="__nav_4_1_6_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_6_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_1" id="__nav_4_1_6_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn custom layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn custom layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_custom_layers/dnn_custom_layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom deep learning layers support {#tutorial_dnn_custom_layers}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_2" id="__nav_4_1_6_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf classification
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_classification/pytorch_cls_model_conversion_c_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Classification Models and Launch with OpenCV C++ {#pytorch_cls_c_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_classification/pytorch_cls_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Classification Models and Launch with OpenCV Python {#pytorch_cls_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_classification/tf_cls_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Classification Models and Launch with OpenCV Python {#tf_cls_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_3" id="__nav_4_1_6_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf detection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_detection/tf_det_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Detection Models and Launch with OpenCV Python {#tf_det_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_4" id="__nav_4_1_6_2_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf segmentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf segmentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_segmentation/pytorch_sem_segm_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Segmentation Models and Launch with OpenCV {#pytorch_segm_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/dnn/dnn_pytorch_tf_segmentation/tf_sem_segm_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Segmentation Models and Launch with OpenCV {#tf_segm_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_2" id="__nav_4_1_6_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Imgproc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Imgproc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_2_1" id="__nav_4_1_6_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Morph lines detection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Morph lines detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doc/tutorials/imgproc/morph_lines_detection/morph_lines_detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract horizontal and vertical lines by using morphological operations {#tutorial_morph_lines_detection}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1" id="__nav_4_1_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1_1" id="__nav_4_1_7_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Src
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Src
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1_1_1" id="__nav_4_1_7_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Webnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/dnn/src/webnn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2" id="__nav_4_1_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gapi
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Gapi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_1" id="__nav_4_1_7_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/gapi/doc/10-hld-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High-level design overview {#gapi_hld}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_1_2" id="__nav_4_1_7_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/gapi/doc/slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G-API Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2" id="__nav_4_1_7_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Src
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Src
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_1" id="__nav_4_1_7_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Api
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/gapi/src/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_2" id="__nav_4_1_7_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Backends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/gapi/src/backends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_3" id="__nav_4_1_7_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Compiler
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compiler
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/gapi/src/compiler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_3" id="__nav_4_1_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_3_1" id="__nav_4_1_7_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Perf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Perf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/js/perf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV.js Performance Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_4" id="__nav_4_1_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Objc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Objc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_4_1" id="__nav_4_1_7_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/objc/doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8" id="__nav_4_1_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Platforms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Platforms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_1" id="__nav_4_1_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_1_1" id="__nav_4_1_8_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aar template
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_8_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Aar template
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../platforms/android/aar-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_2" id="__nav_4_1_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apple
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apple
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../platforms/apple/readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building for Apple Platforms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_3" id="__nav_4_1_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../platforms/js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building OpenCV.js by Emscripten
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_4" id="__nav_4_1_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Maven
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../platforms/maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Maven to build OpenCV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_5" id="__nav_4_1_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wince
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Wince
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../platforms/wince/readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building OpenCV from Source for Windows Embedded Compact (WINCE/WEC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9" id="__nav_4_1_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Samples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Samples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1" id="__nav_4_1_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../samples/dnn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV deep learning module samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2" id="__nav_4_1_9_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn model runner
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_9_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn model runner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2_1" id="__nav_4_1_9_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn conversion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_9_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn conversion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2_1_1" id="__nav_4_1_9_1_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Paddlepaddle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_4_1_9_1_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Paddlepaddle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../samples/dnn/dnn_model_runner/dnn_conversion/paddlepaddle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run PaddlePaddle model using OpenCV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_2" id="__nav_4_1_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../samples/hal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom HAL samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_3" id="__nav_4_1_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Semihosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Semihosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../samples/semihosting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arm semihosting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Source docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Source docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../source_docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    source checking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testcases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Testcases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../source_docs/testcases/tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>This directory contains SystemZ deflate hardware acceleration support.
+It can be enabled using the following build commands:</p>
+<div class="codehilite"><pre><span></span><code>$ ./configure --with-dfltcc-deflate --with-dfltcc-inflate
+$ make
+</code></pre></div>
+
+<p>or</p>
+<div class="codehilite"><pre><span></span><code>$ cmake -DWITH_DFLTCC_DEFLATE=1 -DWITH_DFLTCC_INFLATE=1 .
+$ make
+</code></pre></div>
+
+<p>When built like this, zlib-ng would compress using hardware on level 1,
+and using software on all other levels. Decompression will always happen
+in hardware. In order to enable hardware compression for levels 1-6
+(i.e. to make it used by default) one could add
+<code>-DDFLTCC_LEVEL_MASK=0x7e</code> to CFLAGS when building zlib-ng.</p>
+<p>SystemZ deflate hardware acceleration is available on <a href="https://www.ibm.com/products/z15">IBM z15</a> and newer machines under the name <a href="https://www.ibm.com/support/z-content-solutions/compression/">
+"Integrated Accelerator for zEnterprise Data Compression"</a>. The
+programming interface to it is a machine instruction called DEFLATE
+CONVERSION CALL (DFLTCC). It is documented in Chapter 26 of <a href="https://publibfp.dhe.ibm.com/epubs/pdf/a227832c.pdf">Principles
+of Operation</a>. Both
+the code and the rest of this document refer to this feature simply as
+"DFLTCC".</p>
+<h1 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h1>
+<p>Performance figures are published <a href="https://github.com/iii-i/zlib-ng/wiki/Performance-with-dfltcc-patch-applied-and-dfltcc-support-built-on-dfltcc-enabled-machine">here</a>. The compression speed-up can be as high as 110x and the decompression
+speed-up can be as high as 15x.</p>
+<h1 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h1>
+<p>Two DFLTCC compression calls with identical inputs are not guaranteed to
+produce identical outputs. Therefore care should be taken when using
+hardware compression when reproducible results are desired. In
+particular, zlib-ng-specific <code>zng_deflateSetParams</code> call allows setting
+<code>Z_DEFLATE_REPRODUCIBLE</code> parameter, which disables DFLTCC support for a
+particular stream.</p>
+<p>DFLTCC does not support every single zlib-ng feature, in particular:</p>
+<ul>
+<li><code>inflate(Z_BLOCK)</code> and <code>inflate(Z_TREES)</code></li>
+<li><code>inflateMark()</code></li>
+<li><code>inflatePrime()</code></li>
+<li><code>inflateSyncPoint()</code></li>
+</ul>
+<p>When used, these functions will either switch to software, or, in case
+this is not possible, gracefully fail.</p>
+<h1 id="code-structure">Code structure<a class="headerlink" href="#code-structure" title="Permanent link">&para;</a></h1>
+<p>All SystemZ-specific code lives in <code>arch/s390</code> directory and is
+integrated with the rest of zlib-ng using hook macros.</p>
+<h2 id="hook-macros">Hook macros<a class="headerlink" href="#hook-macros" title="Permanent link">&para;</a></h2>
+<p>DFLTCC takes as arguments a parameter block, an input buffer, an output
+buffer, and a window. Parameter blocks are stored alongside zlib states;
+buffers are forwarded from the caller; and window - which must be
+4k-aligned and is always 64k large, is managed using the <code>PAD_WINDOW()</code>,
+<code>WINDOW_PAD_SIZE</code>, <code>HINT_ALIGNED_WINDOW</code> and <code>DEFLATE_ADJUST_WINDOW_SIZE()</code>
+and <code>INFLATE_ADJUST_WINDOW_SIZE()</code> hooks.</p>
+<p>Software and hardware window formats do not match, therefore,
+<code>deflateSetDictionary()</code>, <code>deflateGetDictionary()</code>, <code>inflateSetDictionary()</code>
+and <code>inflateGetDictionary()</code> need special handling, which is triggered using
+<code>DEFLATE_SET_DICTIONARY_HOOK()</code>, <code>DEFLATE_GET_DICTIONARY_HOOK()</code>,
+<code>INFLATE_SET_DICTIONARY_HOOK()</code> and <code>INFLATE_GET_DICTIONARY_HOOK()</code> macros.</p>
+<p><code>deflateResetKeep()</code> and <code>inflateResetKeep()</code> update the DFLTCC
+parameter block using <code>DEFLATE_RESET_KEEP_HOOK()</code> and
+<code>INFLATE_RESET_KEEP_HOOK()</code> macros.</p>
+<p><code>INFLATE_PRIME_HOOK()</code>, <code>INFLATE_MARK_HOOK()</code> and
+<code>INFLATE_SYNC_POINT_HOOK()</code> macros make the respective unsupported
+calls gracefully fail.</p>
+<p><code>DEFLATE_PARAMS_HOOK()</code> implements switching between hardware and
+software compression mid-stream using <code>deflateParams()</code>. Switching
+normally entails flushing the current block, which might not be possible
+in low memory situations. <code>deflateParams()</code> uses <code>DEFLATE_DONE()</code> hook
+in order to detect and gracefully handle such situations.</p>
+<p>The algorithm implemented in hardware has different compression ratio
+than the one implemented in software. <code>DEFLATE_BOUND_ADJUST_COMPLEN()</code>
+and <code>DEFLATE_NEED_CONSERVATIVE_BOUND()</code> macros make <code>deflateBound()</code>
+return the correct results for the hardware implementation.</p>
+<p>Actual compression and decompression are handled by <code>DEFLATE_HOOK()</code> and
+<code>INFLATE_TYPEDO_HOOK()</code> macros. Since inflation with DFLTCC manages the
+window on its own, calling <code>updatewindow()</code> is suppressed using
+<code>INFLATE_NEED_UPDATEWINDOW()</code> macro.</p>
+<p>In addition to compression, DFLTCC computes CRC-32 and Adler-32
+checksums, therefore, whenever it's used, software checksumming is
+suppressed using <code>DEFLATE_NEED_CHECKSUM()</code> and <code>INFLATE_NEED_CHECKSUM()</code>
+macros.</p>
+<p>While software always produces reproducible compression results, this
+is not the case for DFLTCC. Therefore, zlib-ng users are given the
+ability to specify whether or not reproducible compression results
+are required. While it is always possible to specify this setting
+before the compression begins, it is not always possible to do so in
+the middle of a deflate stream - the exact conditions for that are
+determined by <code>DEFLATE_CAN_SET_REPRODUCIBLE()</code> macro.</p>
+<h2 id="systemz-specific-code">SystemZ-specific code<a class="headerlink" href="#systemz-specific-code" title="Permanent link">&para;</a></h2>
+<p>When zlib-ng is built with DFLTCC, the hooks described above are
+converted to calls to functions, which are implemented in
+<code>arch/s390/dfltcc_*</code> files. The functions can be grouped in three broad
+categories:</p>
+<ul>
+<li>Base DFLTCC support, e.g. wrapping the machine instruction - <code>dfltcc()</code>.</li>
+<li>Translating between software and hardware data formats, e.g.
+  <code>dfltcc_deflate_set_dictionary()</code>.</li>
+<li>Translating between software and hardware state machines, e.g.
+  <code>dfltcc_deflate()</code> and <code>dfltcc_inflate()</code>.</li>
+</ul>
+<p>The functions from the first two categories are fairly simple, however,
+various quirks in both software and hardware state machines make the
+functions from the third category quite complicated.</p>
+<h3 id="dfltcc_deflate-function"><code>dfltcc_deflate()</code> function<a class="headerlink" href="#dfltcc_deflate-function" title="Permanent link">&para;</a></h3>
+<p>This function is called by <code>deflate()</code> and has the following
+responsibilities:</p>
+<ul>
+<li>Checking whether DFLTCC can be used with the current stream. If this
+  is not the case, then it returns <code>0</code>, making <code>deflate()</code> use some
+  other function in order to compress in software. Otherwise it returns
+  <code>1</code>.</li>
+<li>Block management and Huffman table generation. DFLTCC ends blocks only
+  when explicitly instructed to do so by the software. Furthermore,
+  whether to use fixed or dynamic Huffman tables must also be determined
+  by the software. Since looking at data in order to gather statistics
+  would negate performance benefits, the following approach is used: the
+  first <code>DFLTCC_FIRST_FHT_BLOCK_SIZE</code> bytes are placed into a fixed
+  block, and every next <code>DFLTCC_BLOCK_SIZE</code> bytes are placed into
+  dynamic blocks.</li>
+<li>Writing EOBS. Block Closing Control bit in the parameter block
+  instructs DFLTCC to write EOBS, however, certain conditions need to be
+  met: input data length must be non-zero or Continuation Flag must be
+  set. To put this in simpler terms, DFLTCC will silently refuse to
+  write EOBS if this is the only thing that it is asked to do. Since the
+  code has to be able to emit EOBS in software anyway, in order to avoid
+  tricky corner cases Block Closing Control is never used. Whether to
+  write EOBS is instead controlled by <code>soft_bcc</code> variable.</li>
+<li>Triggering block post-processing. Depending on flush mode, <code>deflate()</code>
+  must perform various additional actions when a block or a stream ends.
+  <code>dfltcc_deflate()</code> informs <code>deflate()</code> about this using
+  <code>block_state *result</code> parameter.</li>
+<li>Converting software state fields into hardware parameter block fields,
+  and vice versa. For example, <code>wrap</code> and Check Value Type or <code>bi_valid</code>
+  and Sub-Byte Boundary. Certain fields cannot be translated and must
+  persist untouched in the parameter block between calls, for example,
+  Continuation Flag or Continuation State Buffer.</li>
+<li>Handling flush modes and low-memory situations. These aspects are
+  quite intertwined and pervasive. The general idea here is that the
+  code must not do anything in software - whether explicitly by e.g.
+  calling <code>send_eobs()</code>, or implicitly - by returning to <code>deflate()</code>
+  with certain return and <code>*result</code> values, when Continuation Flag is
+  set.</li>
+<li>Ending streams. When a new block is started and flush mode is
+  <code>Z_FINISH</code>, Block Header Final parameter block bit is used to mark
+  this block as final. However, sometimes an empty final block is
+  needed, and, unfortunately, just like with EOBS, DFLTCC will silently
+  refuse to do this. The general idea of DFLTCC implementation is to
+  rely as much as possible on the existing code. Here in order to do
+  this, the code pretends that it does not support DFLTCC, which makes
+  <code>deflate()</code> call a software compression function, which writes an
+  empty final block. Whether this is required is controlled by
+  <code>need_empty_block</code> variable.</li>
+<li>Error handling. This is simply converting
+  Operation-Ending-Supplemental Code to string. Errors can only happen
+  due to things like memory corruption, and therefore they don't affect
+  the <code>deflate()</code> return code.</li>
+</ul>
+<h3 id="dfltcc_inflate-function"><code>dfltcc_inflate()</code> function<a class="headerlink" href="#dfltcc_inflate-function" title="Permanent link">&para;</a></h3>
+<p>This function is called by <code>inflate()</code> from the <code>TYPEDO</code> state (that is,
+when all the metadata is parsed and the stream is positioned at the type
+bits of deflate block header) and it's responsible for the following:</p>
+<ul>
+<li>Falling back to software when flush mode is <code>Z_BLOCK</code> or <code>Z_TREES</code>.
+  Unfortunately, there is no way to ask DFLTCC to stop decompressing on
+  block or tree boundary.</li>
+<li><code>inflate()</code> decompression loop management. This is controlled using
+  the return value, which can be either <code>DFLTCC_INFLATE_BREAK</code> or
+  <code>DFLTCC_INFLATE_CONTINUE</code>.</li>
+<li>Converting software state fields into hardware parameter block fields,
+  and vice versa. For example, <code>whave</code> and History Length or <code>wnext</code> and
+  History Offset.</li>
+<li>Ending streams. This instructs <code>inflate()</code> to return <code>Z_STREAM_END</code>
+  and is controlled by <code>last</code> state field.</li>
+<li>Error handling. Like deflate, error handling comprises
+  Operation-Ending-Supplemental Code to string conversion. Unlike
+  deflate, errors may happen due to bad inputs, therefore they are
+  propagated to <code>inflate()</code> by setting <code>mode</code> field to <code>MEM</code> or <code>BAD</code>.</li>
+</ul>
+<h1 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h1>
+<p>Given complexity of DFLTCC machine instruction, it is not clear whether
+QEMU TCG will ever support it. At the time of writing, one has to have
+access to an IBM z15+ VM or LPAR in order to test DFLTCC support. Since
+DFLTCC is a non-privileged instruction, neither special VM/LPAR
+configuration nor root are required.</p>
+<p>zlib-ng CI uses an IBM-provided z15 self-hosted builder for the DFLTCC
+testing. There is no official IBM Z GitHub Actions runner, so we build
+one inspired by <code>anup-kodlekere/gaplib</code>.
+Future updates to actions-runner might need an updated patch. The .net
+version number patch has been separated into a separate file to avoid a
+need for constantly changing the patch.</p>
+<h2 id="configuring-the-builder">Configuring the builder.<a class="headerlink" href="#configuring-the-builder" title="Permanent link">&para;</a></h2>
+<h3 id="install-prerequisites">Install prerequisites.<a class="headerlink" href="#install-prerequisites" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo dnf install podman
+</code></pre></div>
+<h3 id="add-actions-runner-service">Add actions-runner service.<a class="headerlink" href="#add-actions-runner-service" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo cp self-hosted-builder/actions-runner.service /etc/systemd/system/
+sudo systemctl daemon-reload
+</code></pre></div>
+<h3 id="create-a-config-file-needs-github-personal-access-token">Create a config file, needs github personal access token.<a class="headerlink" href="#create-a-config-file-needs-github-personal-access-token" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># Create file /etc/actions-runner
+repo=&lt;owner&gt;/&lt;name&gt;
+access_token=&lt;ghp_***&gt;
+</code></pre></div>
+<p>Access token should have the repo scope, consult
+https://docs.github.com/en/rest/reference/actions#create-a-registration-token-for-a-repository
+for details.</p>
+<h3 id="autostart-actions-runner">Autostart actions-runner.<a class="headerlink" href="#autostart-actions-runner" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl enable --now actions-runner
+</code></pre></div>
+<h2 id="rebuilding-the-container">Rebuilding the container<a class="headerlink" href="#rebuilding-the-container" title="Permanent link">&para;</a></h2>
+<p>In order to update the <code>gaplib-actions-runner</code> podman container, e.g. to get the
+latest OS security fixes, follow these steps:
+<div class="highlight"><pre><span></span><code># Stop actions-runner service
+sudo systemctl stop actions-runner
+
+# Delete old container
+sudo podman container rm gaplib-actions-runner
+
+# Delete old image
+sudo podman image rm localhost/zlib-ng/actions-runner
+
+# Build image
+sudo podman build --squash -f Dockerfile.zlib-ng --tag zlib-ng/actions-runner --build-arg .
+
+# Build container
+sudo podman create --name=gaplib-actions-runner --env-file=/etc/actions-runner --init --interactive --volume=actions-runner-temp:/home/actions-runner zlib-ng/actions-runner
+
+# Start actions-runner service
+sudo systemctl start actions-runner
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

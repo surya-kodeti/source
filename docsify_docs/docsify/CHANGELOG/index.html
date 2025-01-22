@@ -1,0 +1,5884 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://surya-kodeti.github.io/source/docsify_docs/docsify/CHANGELOG/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../CONTRIBUTING/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>4.13.0 (2022-10-26) - Documentation Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../styles/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4130-2022-10-26" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Documentation Portal" class="md-header__button md-logo" aria-label="Documentation Portal" data-md-component="logo">
+      
+  <img src="../../../images/amex.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.13.0 (2022-10-26)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation Portal" class="md-nav__button md-logo" aria-label="Documentation Portal" data-md-component="logo">
+      
+  <img src="../../../images/amex.png" alt="logo">
+
+    </a>
+    Documentation Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create shared react context docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Create shared react context docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Create shared react context
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Create shared react context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-shared-react-context_docs/create-shared-react-context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-shared-react-context_docs/create-shared-react-context/CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CHANGELOG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-shared-react-context_docs/create-shared-react-context/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CODE OF CONDUCT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-shared-react-context_docs/create-shared-react-context/CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to create-shared-react-context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create-shared-react-context_docs/create-shared-react-context/SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SECURITY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docsify docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Docsify docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docsify
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docsify
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.13.0 (2022-10-26)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.13.0 (2022-10-26)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4122-2022-01-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12.2 (2022-01-06)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12.2 (2022-01-06)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4121-2021-03-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12.1 (2021-03-07)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12.1 (2021-03-07)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HISTORY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HISTORY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_6" id="__nav_3_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    docsify
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/_coverpage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     coverpage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/_navbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     navbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/_sidebar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+     sidebar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/adding-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/cdn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CDN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/cover/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cover
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/custom-navbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom navbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/embed-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embed files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emoji
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doc helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/language-highlight/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language highlighting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/pwa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offline Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/ui-kit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ui kit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/write-a-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Write a plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_6_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_6_23" id="__nav_3_1_6_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     media
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_6_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_6_23">
+            <span class="md-nav__icon md-icon"></span>
+             media
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/_media/example-with-yaml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example with yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/_media/example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_7" id="__nav_3_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docsify Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CONTRIBUTING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3rdparty
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            3rdparty
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_1" id="__nav_4_1_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Carotene
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Carotene
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/carotene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_2" id="__nav_4_1_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cpufeatures
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cpufeatures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/cpufeatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_3" id="__nav_4_1_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flatbuffers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flatbuffers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/flatbuffers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_4" id="__nav_4_1_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Libjpeg turbo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Libjpeg turbo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/libjpeg-turbo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/libjpeg-turbo/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    libjpeg-turbo Licenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_5" id="__nav_4_1_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Libtiff
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Libtiff
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/libtiff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_6" id="__nav_4_1_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openjpeg
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Openjpeg
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openjpeg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OPENJPEG Library and Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openjpeg/AUTHORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authors of OpenJPEG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openjpeg/CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openjpeg/THANKS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenJPEG THANKS file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_7" id="__nav_4_1_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openvx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Openvx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openvx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++ wrappers for OpenVX-1.x C API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_7_2" id="__nav_4_1_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/openvx/hal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenVX-based HAL implementation.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_8" id="__nav_4_1_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protobuf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Protobuf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/protobuf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9" id="__nav_4_1_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zlib ng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Zlib ng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/zlib-ng/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/zlib-ng/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LICENSE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3" id="__nav_4_1_4_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_4_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Arch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3_1" id="__nav_4_1_4_9_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Riscv
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_4_9_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Riscv
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/zlib-ng/arch/riscv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building RISC-V Target with Cmake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4_9_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4_9_3_2" id="__nav_4_1_4_9_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    S390
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_4_9_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4_9_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            S390
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/3rdparty/zlib-ng/arch/s390/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5_1" id="__nav_4_1_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Opencv stitching tool
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Opencv stitching tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/apps/opencv_stitching_tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/opencv-logo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opencv logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2" id="__nav_4_1_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1" id="__nav_4_1_6_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_6_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_1" id="__nav_4_1_6_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn custom layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn custom layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_custom_layers/dnn_custom_layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom deep learning layers support {#tutorial_dnn_custom_layers}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_2" id="__nav_4_1_6_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf classification
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_classification/pytorch_cls_model_conversion_c_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Classification Models and Launch with OpenCV C++ {#pytorch_cls_c_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_classification/pytorch_cls_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Classification Models and Launch with OpenCV Python {#pytorch_cls_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_classification/tf_cls_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Classification Models and Launch with OpenCV Python {#tf_cls_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_3" id="__nav_4_1_6_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf detection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_detection/tf_det_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Detection Models and Launch with OpenCV Python {#tf_det_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_1_4" id="__nav_4_1_6_2_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn pytorch tf segmentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn pytorch tf segmentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_segmentation/pytorch_sem_segm_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of PyTorch Segmentation Models and Launch with OpenCV {#pytorch_segm_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/dnn/dnn_pytorch_tf_segmentation/tf_sem_segm_model_conversion_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion of TensorFlow Segmentation Models and Launch with OpenCV {#tf_segm_tutorial_dnn_conversion}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_2" id="__nav_4_1_6_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Imgproc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Imgproc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6_2_2_1" id="__nav_4_1_6_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Morph lines detection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_6_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Morph lines detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/doc/tutorials/imgproc/morph_lines_detection/morph_lines_detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract horizontal and vertical lines by using morphological operations {#tutorial_morph_lines_detection}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1" id="__nav_4_1_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1_1" id="__nav_4_1_7_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Src
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Src
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_1_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_1_1_1" id="__nav_4_1_7_1_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_1_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_1_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Webnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/dnn/src/webnn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2" id="__nav_4_1_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gapi
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Gapi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_1" id="__nav_4_1_7_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/gapi/doc/10-hld-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High-level design overview {#gapi_hld}
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_1_2" id="__nav_4_1_7_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/gapi/doc/slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G-API Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2" id="__nav_4_1_7_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Src
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Src
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_1" id="__nav_4_1_7_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Api
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/gapi/src/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_2" id="__nav_4_1_7_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Backends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/gapi/src/backends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_2_2_3" id="__nav_4_1_7_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Compiler
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_7_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compiler
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/gapi/src/compiler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_3" id="__nav_4_1_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_3_1" id="__nav_4_1_7_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Perf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Perf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/js/perf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV.js Performance Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_4" id="__nav_4_1_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Objc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Objc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7_4_1" id="__nav_4_1_7_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_7_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/modules/objc/doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8" id="__nav_4_1_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Platforms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Platforms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_1" id="__nav_4_1_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_1_1" id="__nav_4_1_8_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aar template
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_8_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Aar template
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/platforms/android/aar-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_2" id="__nav_4_1_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apple
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apple
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/platforms/apple/readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building for Apple Platforms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_3" id="__nav_4_1_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/platforms/js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building OpenCV.js by Emscripten
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_4" id="__nav_4_1_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Maven
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/platforms/maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Maven to build OpenCV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_8_5" id="__nav_4_1_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wince
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Wince
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/platforms/wince/readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building OpenCV from Source for Windows Embedded Compact (WINCE/WEC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9" id="__nav_4_1_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Samples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Samples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1" id="__nav_4_1_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/samples/dnn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenCV deep learning module samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2" id="__nav_4_1_9_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn model runner
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_1_9_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn model runner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2_1" id="__nav_4_1_9_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dnn conversion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_1_9_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dnn conversion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_1_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_1_2_1_1" id="__nav_4_1_9_1_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Paddlepaddle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_4_1_9_1_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_1_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Paddlepaddle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/samples/dnn/dnn_model_runner/dnn_conversion/paddlepaddle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run PaddlePaddle model using OpenCV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_2" id="__nav_4_1_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/samples/hal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom HAL samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_9_3" id="__nav_4_1_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Semihosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Semihosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../opencv_docs/opencv/samples/semihosting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arm semihosting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Source docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Source docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source_docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    source checking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testcases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Testcases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source_docs/testcases/tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4122-2022-01-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12.2 (2022-01-06)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12.2 (2022-01-06)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4121-2021-03-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12.1 (2021-03-07)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.12.1 (2021-03-07)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="4130-2022-10-26"><a href="https://github.com/docsifyjs/docsify/compare/v4.12.4...v4.13.0">4.13.0</a> (2022-10-26)<a class="headerlink" href="#4130-2022-10-26" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cornerExternalLinkTarget config. (<a href="https://github.com/docsifyjs/docsify/issues/1814">#1814</a>) (<a href="https://github.com/docsifyjs/docsify/commit/54cc5f939b9499ae56604f589eef4e3f1c13cdc5">54cc5f9</a>)</li>
+<li>correctly fix missing +1, -1 (<a href="https://github.com/docsifyjs/docsify/issues/1722">#1722</a>) (<a href="https://github.com/docsifyjs/docsify/commit/719dcbea5cb0c8b0835f8e9fc473b094feecb7ec">719dcbe</a>)</li>
+<li>Coverpage when content &gt; viewport height (<a href="https://github.com/docsifyjs/docsify/issues/1744">#1744</a>) (<a href="https://github.com/docsifyjs/docsify/commit/301b5169613e95765eda335a4b21d0f9f9cbbbfd">301b516</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/381">#381</a></li>
+<li>filter null node first. (<a href="https://github.com/docsifyjs/docsify/issues/1909">#1909</a>) (<a href="https://github.com/docsifyjs/docsify/commit/d27af3dd09a882fce4f1e2774065de57a3501858">d27af3d</a>)</li>
+<li>fix docsify-ignore in search title. (<a href="https://github.com/docsifyjs/docsify/issues/1872">#1872</a>) (<a href="https://github.com/docsifyjs/docsify/commit/9832805681cc6099e9c78deecf6dc0c6fb61fd9b">9832805</a>)</li>
+<li>fix search with no content. (<a href="https://github.com/docsifyjs/docsify/issues/1878">#1878</a>) (<a href="https://github.com/docsifyjs/docsify/commit/9b74744299ece0108573a142e5a2e949dc569254">9b74744</a>)</li>
+<li>Ignore emoji shorthand codes in URIs (<a href="https://github.com/docsifyjs/docsify/issues/1847">#1847</a>) (<a href="https://github.com/docsifyjs/docsify/commit/3c9b3d9702bb05a5ff45a4ce4233e144cf1ebecb">3c9b3d9</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1823">#1823</a></li>
+<li>Legacy bugs (styles, site plugin error, and dev server error) (<a href="https://github.com/docsifyjs/docsify/issues/1743">#1743</a>) (<a href="https://github.com/docsifyjs/docsify/commit/fa6df6d58487ec294e22be04ac159dfb5745bd66">fa6df6d</a>)</li>
+<li>package.json &amp; package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1756">#1756</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2dc5b12b715e3ad1922a6401e3fd9837a99ef9c0">2dc5b12</a>)</li>
+<li>packages/docsify-server-renderer/package.json &amp; packages/docsify-server-renderer/package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1715">#1715</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c1227b22cb8a3fb6c362ca8ac109082ab2251cc3">c1227b2</a>)</li>
+</ul>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Emoji build (<a href="https://github.com/docsifyjs/docsify/issues/1766">#1766</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ba5ee26f00e957b58173f96b1901f6ffd3d8e5f5">ba5ee26</a>)</li>
+<li>Native emoji w/ image-based fallbacks and improved parsing (<a href="https://github.com/docsifyjs/docsify/issues/1746">#1746</a>) (<a href="https://github.com/docsifyjs/docsify/commit/35002c92b762f0d12e51582d7de7914fa380596a">35002c9</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/779">#779</a></li>
+<li>Plugin error handling (<a href="https://github.com/docsifyjs/docsify/issues/1742">#1742</a>) (<a href="https://github.com/docsifyjs/docsify/commit/63b2535a45a98945ec897277f4fbddec2ddba887">63b2535</a>)</li>
+</ul>
+<h2 id="4122-2022-01-06"><a href="https://github.com/docsifyjs/docsify/compare/v4.12.1...v4.12.2">4.12.2</a> (2022-01-06)<a class="headerlink" href="#4122-2022-01-06" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add escapeHtml for search (<a href="https://github.com/docsifyjs/docsify/issues/1551">#1551</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c24f7f6f0b87a87f6dd3755f69eb0969ebb029c9">c24f7f6</a>)</li>
+<li>allow also " inside of an embed (<a href="https://github.com/docsifyjs/docsify/commit/ec16e4a9d5718ac4f4c25bb3dcaea3b7551372e0">ec16e4a</a>)</li>
+<li>buble theme missing generic fallback font (<a href="https://github.com/docsifyjs/docsify/issues/1568">#1568</a>) (<a href="https://github.com/docsifyjs/docsify/commit/37d9f0e1214276e93b2a11ed87390aafa1bdbcec">37d9f0e</a>)</li>
+<li>Cannot read property 'classList' of null (<a href="https://github.com/docsifyjs/docsify/issues/1527">#1527</a>) (<a href="https://github.com/docsifyjs/docsify/commit/d6df2b85a99371bb9a87402a10dd515bb734182e">d6df2b8</a>), closes <a href="https://github.com//github.com/docsifyjs/docsify/pull/1527/issues/issuecomment-793455105">/github.com/docsifyjs/docsify/pull/1527#issuecomment-793455105</a></li>
+<li>Cannot read property 'tagName' of null (<a href="https://github.com/docsifyjs/docsify/issues/1655">#1655</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c3cdadc37137edcd9e219359973902d2fc8b66ff">c3cdadc</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1154">#1154</a> <a href="https://github.com//github.com/docsifyjs/docsify/blob/develop/src/core/router/history/html5.js/issues/L25-L27">/github.com/docsifyjs/docsify/blob/develop/src/core/router/history/html5.js#L25-L27</a> <a href="https://github.com//github.com/docsifyjs/docsify/blob/develop/src/core/router/history/hash.js/issues/L47-L49">/github.com/docsifyjs/docsify/blob/develop/src/core/router/history/hash.js#L47-L49</a></li>
+<li>upgrade debug from 4.3.2 to 4.3.3 (<a href="https://github.com/docsifyjs/docsify/issues/1692">#1692</a>) (<a href="https://github.com/docsifyjs/docsify/commit/40e77490c68b4143c75dfaebcd0b7f640581306b">40e7749</a>)</li>
+<li>Upgrade docsify from 4.12.0 to 4.12.1 (<a href="https://github.com/docsifyjs/docsify/issues/1544">#1544</a>) (<a href="https://github.com/docsifyjs/docsify/commit/d607f6d71c35b50f586806a832f65061f5e3427e">d607f6d</a>)</li>
+<li>upgrade dompurify from 2.2.6 to 2.2.7 (<a href="https://github.com/docsifyjs/docsify/issues/1552">#1552</a>) (<a href="https://github.com/docsifyjs/docsify/commit/407e4d4f3de78bebd639a3fdae751f8045728e57">407e4d4</a>)</li>
+<li>Upgrade dompurify from 2.2.6 to 2.2.7 (<a href="https://github.com/docsifyjs/docsify/issues/1553">#1553</a>) (<a href="https://github.com/docsifyjs/docsify/commit/93c48f3d615d95dba550a0e95df6b545d68c3593">93c48f3</a>)</li>
+<li>upgrade dompurify from 2.2.7 to 2.2.8 (<a href="https://github.com/docsifyjs/docsify/issues/1577">#1577</a>) (<a href="https://github.com/docsifyjs/docsify/commit/0dd44cc828cc54f7c3b776d45b32925b66cae499">0dd44cc</a>)</li>
+<li>upgrade dompurify from 2.2.7 to 2.3.0 (<a href="https://github.com/docsifyjs/docsify/issues/1619">#1619</a>) (<a href="https://github.com/docsifyjs/docsify/commit/66303fec4c7115621e556ad742cfac9d19f26bd9">66303fe</a>)</li>
+<li>upgrade dompurify from 2.2.8 to 2.2.9 (<a href="https://github.com/docsifyjs/docsify/issues/1600">#1600</a>) (<a href="https://github.com/docsifyjs/docsify/commit/baf5a8a4962656d8be8f714283064d2ea10c7e14">baf5a8a</a>)</li>
+<li>upgrade dompurify from 2.2.9 to 2.3.0 (<a href="https://github.com/docsifyjs/docsify/issues/1616">#1616</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b07fa3cc8323e63dd7b105c7e29b2e1914f5c117">b07fa3c</a>)</li>
+<li>upgrade dompurify from 2.3.0 to 2.3.1 (<a href="https://github.com/docsifyjs/docsify/issues/1635">#1635</a>) (<a href="https://github.com/docsifyjs/docsify/commit/5ac8237cc76e19ca2b373a1a1da6eb4a4da6d8b2">5ac8237</a>)</li>
+<li>upgrade dompurify from 2.3.1 to 2.3.2 (<a href="https://github.com/docsifyjs/docsify/issues/1647">#1647</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ff6acfa7623a7db8b00d62c51a9c3037215c4888">ff6acfa</a>)</li>
+<li>upgrade node-fetch from 2.6.1 to 2.6.2 (<a href="https://github.com/docsifyjs/docsify/issues/1641">#1641</a>) (<a href="https://github.com/docsifyjs/docsify/commit/6ee1c142769a6442aa8c1523ab215106707fa7fc">6ee1c14</a>)</li>
+<li>upgrade node-fetch from 2.6.2 to 2.6.4 (<a href="https://github.com/docsifyjs/docsify/issues/1649">#1649</a>) (<a href="https://github.com/docsifyjs/docsify/commit/6f81034ba6a7a6b64ccf1acd2d1fc73761f70a63">6f81034</a>)</li>
+<li>upgrade node-fetch from 2.6.4 to 2.6.5 (<a href="https://github.com/docsifyjs/docsify/issues/1654">#1654</a>) (<a href="https://github.com/docsifyjs/docsify/commit/d16e657f708777e8377d8e158b50b4010623282d">d16e657</a>)</li>
+<li>upgrade node-fetch from 2.6.5 to 2.6.6 (<a href="https://github.com/docsifyjs/docsify/issues/1668">#1668</a>) (<a href="https://github.com/docsifyjs/docsify/commit/cefe3f87e697a6c54a74d601df2eeb331fcd8933">cefe3f8</a>)</li>
+</ul>
+<h2 id="4121-2021-03-07"><a href="https://github.com/docsifyjs/docsify/compare/v4.12.0...v4.12.1">4.12.1</a> (2021-03-07)<a class="headerlink" href="#4121-2021-03-07" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_2">Bug Fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>isExternal check with malformed URL + tests (<a href="https://github.com/docsifyjs/docsify/issues/1510">#1510</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ff2a66f12752471277fe81a64ad6c4b2c08111fe">ff2a66f</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1477">#1477</a> <a href="https://github.com/docsifyjs/docsify/issues/1126">#1126</a> <a href="https://github.com/docsifyjs/docsify/issues/1489">#1489</a></li>
+<li>Replace ES6 usage for IE11 compatibility (<a href="https://github.com/docsifyjs/docsify/issues/1500">#1500</a>) (<a href="https://github.com/docsifyjs/docsify/commit/a0f61b2af72cb888ea5b635021a5c9da6beb7ac5">a0f61b2</a>)</li>
+<li>theme switcher in IE11 (<a href="https://github.com/docsifyjs/docsify/issues/1502">#1502</a>) (<a href="https://github.com/docsifyjs/docsify/commit/8cda07891afeb1ea6e198d2a600f205357ab4b89">8cda078</a>)</li>
+<li>Upgrade docsify from 4.11.6 to 4.12.0 (<a href="https://github.com/docsifyjs/docsify/issues/1518">#1518</a>) (<a href="https://github.com/docsifyjs/docsify/commit/47cd86c8f196a241fc23720e3addfe95d4c973cd">47cd86c</a>)</li>
+</ul>
+<h3 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Support search when there is no title (<a href="https://github.com/docsifyjs/docsify/issues/1519">#1519</a>) (<a href="https://github.com/docsifyjs/docsify/commit/bc3726853fb2d1f9241927ea0317970ab0c8a2f2">bc37268</a>)</li>
+</ul>
+<h3 id="chore">Chore<a class="headerlink" href="#chore" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix missing carbon (<a href="https://github.com/docsifyjs/docsify/issues/1501">#1501</a>)</li>
+<li>Change Gitter to Discord throughout project (<a href="https://github.com/docsifyjs/docsify/issues/1507">#1507</a>)</li>
+<li>Add test cases on isExternal (<a href="https://github.com/docsifyjs/docsify/issues/1515">#1515</a>)</li>
+</ul>
+<h1 id="4120-2021-02-08"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.6...v4.12.0">4.12.0</a> (2021-02-08)<a class="headerlink" href="#4120-2021-02-08" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_3">Bug Fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add missing argument for highlighting code (<a href="https://github.com/docsifyjs/docsify/issues/1365">#1365</a>) (<a href="https://github.com/docsifyjs/docsify/commit/f35bf99d9c762774e328b30347707e62eb8e6f63">f35bf99</a>)</li>
+<li>Can't search homepage content (<a href="https://github.com/docsifyjs/docsify/issues/1391">#1391</a>) (<a href="https://github.com/docsifyjs/docsify/commit/25bc9b7eb7e878a6a50ed5f91d33d6a75f9811b0">25bc9b7</a>)</li>
+<li>Cannot read property 'startsWith' of undefined (<a href="https://github.com/docsifyjs/docsify/issues/1358">#1358</a>) (<a href="https://github.com/docsifyjs/docsify/commit/9351729634b52db0e7e241bed7784fbcd5c39fe0">9351729</a>)</li>
+<li>Cannot read property level of undefined (<a href="https://github.com/docsifyjs/docsify/issues/1357">#1357</a>) (<a href="https://github.com/docsifyjs/docsify/commit/4807e58cb994de83f063cb82d2b4a695f29378c8">4807e58</a>)</li>
+<li>cannot search list content (<a href="https://github.com/docsifyjs/docsify/issues/1361">#1361</a>) (<a href="https://github.com/docsifyjs/docsify/commit/8d17dcbe68048d654e62adb01a3925e39a8e0c44">8d17dcb</a>)</li>
+<li>duplicate search content when <code>/README</code> or <code>/</code> exists in the sidebar (<a href="https://github.com/docsifyjs/docsify/issues/1403">#1403</a>) (<a href="https://github.com/docsifyjs/docsify/commit/7c3bf98df869188d5956ed1a331f7048b6eba441">7c3bf98</a>)</li>
+<li>package.json &amp; package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1419">#1419</a>) (<a href="https://github.com/docsifyjs/docsify/commit/69b6907c864dbcdf1fe5c75f51a80e6ae6ec279d">69b6907</a>)</li>
+<li>packages/docsify-server-renderer/package.json &amp; packages/docsify-server-renderer/package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1389">#1389</a>) (<a href="https://github.com/docsifyjs/docsify/commit/62cd35ee8345270aab7a48bc761db007d54a0f48">62cd35e</a>)</li>
+<li>packages/docsify-server-renderer/package.json &amp; packages/docsify-server-renderer/package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1418">#1418</a>) (<a href="https://github.com/docsifyjs/docsify/commit/58fbca00ebd12f636c213d386761df9ebfb2bd4c">58fbca0</a>)</li>
+<li>Prevent loading remote content via URL hash (<a href="https://github.com/docsifyjs/docsify/issues/1489">#1489</a>) (<a href="https://github.com/docsifyjs/docsify/commit/14ce7f3d862ac79fc7d9d316cb2e057d50e1b506">14ce7f3</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1477">#1477</a> <a href="https://github.com/docsifyjs/docsify/issues/1126">#1126</a></li>
+<li>search on homepage test (<a href="https://github.com/docsifyjs/docsify/issues/1398">#1398</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ee550d0c51f222851854c7cd7e9e6f76e26eb6f4">ee550d0</a>)</li>
+<li>search titles containing ignored characters (<a href="https://github.com/docsifyjs/docsify/issues/1395">#1395</a>) (<a href="https://github.com/docsifyjs/docsify/commit/a2ebb2192ac73211a8924111d736df9574abf61b">a2ebb21</a>)</li>
+<li>sidebar active class and expand don't work as expect when use "space" in markdown filename (<a href="https://github.com/docsifyjs/docsify/issues/1454">#1454</a>) (<a href="https://github.com/docsifyjs/docsify/commit/dcf5a644eb6a2eef65fb940f3407c12828a679bc">dcf5a64</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1032">#1032</a></li>
+<li>sidebar horizontal scroll bar (<a href="https://github.com/docsifyjs/docsify/issues/1362">#1362</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b480822286c66b478e5a7a9b2c82a10b99c69121">b480822</a>)</li>
+<li>sidebar title error (<a href="https://github.com/docsifyjs/docsify/issues/1360">#1360</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2100fc318b009c6e448e48ffff6a693f1988916c">2100fc3</a>)</li>
+<li>slugs are still broken when headings contain html (<a href="https://github.com/docsifyjs/docsify/issues/1443">#1443</a>) (<a href="https://github.com/docsifyjs/docsify/commit/76c5e685d75ee6df9acc0a7cf92d5daa138c3240">76c5e68</a>)</li>
+<li>the sidebar links to another site. (<a href="https://github.com/docsifyjs/docsify/issues/1336">#1336</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c9d4f7abc94a2cbc4bb558013775df380c1c8376">c9d4f7a</a>)</li>
+<li>title error when sidebar link exists with html tag (<a href="https://github.com/docsifyjs/docsify/issues/1404">#1404</a>) (<a href="https://github.com/docsifyjs/docsify/commit/8ccc20225104376af2e5df6757c4dbd58c0e758e">8ccc202</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1408">#1408</a></li>
+<li>Unable to navigate on server without default index support (<a href="https://github.com/docsifyjs/docsify/issues/1372">#1372</a>) (<a href="https://github.com/docsifyjs/docsify/commit/759ffac992b19dbb05b92114ec5620d3bb180d0d">759ffac</a>)</li>
+<li>upgrade debug from 4.1.1 to 4.3.0 (<a href="https://github.com/docsifyjs/docsify/issues/1390">#1390</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ae45b3201ba03303a2feb5a347b18fda818a569a">ae45b32</a>)</li>
+<li>upgrade debug from 4.3.0 to 4.3.1 (<a href="https://github.com/docsifyjs/docsify/issues/1446">#1446</a>) (<a href="https://github.com/docsifyjs/docsify/commit/bc3350f6e6bfe670c95569b4e9c51321f5c7dbb9">bc3350f</a>)</li>
+<li>upgrade debug from 4.3.1 to 4.3.2 (<a href="https://github.com/docsifyjs/docsify/issues/1463">#1463</a>) (<a href="https://github.com/docsifyjs/docsify/commit/df21153ab5e841ad89707e07c68a04873a2f3fe8">df21153</a>)</li>
+<li>upgrade docsify from 4.11.4 to 4.11.6 (<a href="https://github.com/docsifyjs/docsify/issues/1373">#1373</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c2d12ed27fe86b0c5cd690b4d8a22bf06d2a90b9">c2d12ed</a>)</li>
+<li>upgrade dompurify from 2.0.17 to 2.1.0 (<a href="https://github.com/docsifyjs/docsify/issues/1397">#1397</a>) (<a href="https://github.com/docsifyjs/docsify/commit/1863d8edb70da234bf7f211986ba71706351682f">1863d8e</a>)</li>
+<li>upgrade dompurify from 2.1.0 to 2.1.1 (<a href="https://github.com/docsifyjs/docsify/issues/1402">#1402</a>) (<a href="https://github.com/docsifyjs/docsify/commit/8cf9fd8150bd67709c68d8dfe4dc881624583ac8">8cf9fd8</a>)</li>
+<li>upgrade dompurify from 2.2.2 to 2.2.3 (<a href="https://github.com/docsifyjs/docsify/issues/1457">#1457</a>) (<a href="https://github.com/docsifyjs/docsify/commit/720d9091c8e571d6c891426983f54d9c94739182">720d909</a>)</li>
+<li>upgrade dompurify from 2.2.2 to 2.2.6 (<a href="https://github.com/docsifyjs/docsify/issues/1483">#1483</a>) (<a href="https://github.com/docsifyjs/docsify/commit/eee9507d435459ae8e68e1112bb58a63b2f58530">eee9507</a>)</li>
+<li>upgrade dompurify from 2.2.3 to 2.2.6 (<a href="https://github.com/docsifyjs/docsify/issues/1482">#1482</a>) (<a href="https://github.com/docsifyjs/docsify/commit/7adad57df1b7efa469b0cde37f788c36dc27cf8b">7adad57</a>)</li>
+<li>upgrade marked from 1.2.4 to 1.2.9 (<a href="https://github.com/docsifyjs/docsify/issues/1486">#1486</a>) (<a href="https://github.com/docsifyjs/docsify/commit/716a7fa777a1eee66964977e1d4405cff3275c53">716a7fa</a>)</li>
+<li>upgrade prismjs from 1.21.0 to 1.22.0 (<a href="https://github.com/docsifyjs/docsify/issues/1415">#1415</a>) (<a href="https://github.com/docsifyjs/docsify/commit/0806f48531b6cb5e6a395c12ab88f0b59281bbf8">0806f48</a>)</li>
+<li>upgrade prismjs from 1.22.0 to 1.23.0 (<a href="https://github.com/docsifyjs/docsify/issues/1481">#1481</a>) (<a href="https://github.com/docsifyjs/docsify/commit/5f29cde84c7b74d70c34e3f1f43c479f1bba670d">5f29cde</a>)</li>
+<li>Use legacy-compatible methods for IE11 (<a href="https://github.com/docsifyjs/docsify/issues/1495">#1495</a>) (<a href="https://github.com/docsifyjs/docsify/commit/06cbebfc0d34726f4a7102a7dc9020520f3a7f86">06cbebf</a>)</li>
+</ul>
+<h3 id="features_2">Features<a class="headerlink" href="#features_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>search ignore diacritical marks (<a href="https://github.com/docsifyjs/docsify/issues/1434">#1434</a>) (<a href="https://github.com/docsifyjs/docsify/commit/8968a744cea5910057ba59ef690316722a35b341">8968a74</a>)</li>
+<li>Add Jest + Playwright Testing (<a href="https://github.com/docsifyjs/docsify/issues/1276">#1276</a>)</li>
+<li>Add Vue components, mount options, global options, and v3 support (<a href="https://github.com/docsifyjs/docsify/issues/1409">#1409</a>)</li>
+</ul>
+<h2 id="4116-2020-08-22"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.5...v4.11.6">4.11.6</a> (2020-08-22)<a class="headerlink" href="#4116-2020-08-22" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_4">Bug Fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add patch for {docsify-ignore} and {docsify-ignore-all} (<a href="https://github.com/docsifyjs/docsify/commit/ce316075e033afdbeb43ce01e284a29fe1870e38">ce31607</a>)</li>
+</ul>
+<h2 id="4115-2020-08-21"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.4...v4.11.5">4.11.5</a> (2020-08-21)<a class="headerlink" href="#4115-2020-08-21" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_5">Bug Fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Russian language link error (<a href="https://github.com/docsifyjs/docsify/issues/1270">#1270</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2a52460a59448abaf681046fbc5dca642285ae1f">2a52460</a>)</li>
+<li>{docsify-updated} in the sample code is parsed into time (<a href="https://github.com/docsifyjs/docsify/issues/1321">#1321</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2048610aacd4e3c6a592f4247834a726c7ca33fb">2048610</a>)</li>
+<li>Add error handling for missing dependencies (fixes <a href="https://github.com/docsifyjs/docsify/issues/1210">#1210</a>) (<a href="https://github.com/docsifyjs/docsify/issues/1232">#1232</a>) (<a href="https://github.com/docsifyjs/docsify/commit/3673001a24cb24c57454f9bc7619de49d2c3a044">3673001</a>)</li>
+<li>after setting the background image, the button is obscured (<a href="https://github.com/docsifyjs/docsify/issues/1234">#1234</a>) (<a href="https://github.com/docsifyjs/docsify/commit/34d918f9973bdb8e893248853e3ef7e803d4c253">34d918f</a>)</li>
+<li>convert {docsify-ignore} and {docsify-ignore-all} to HTML comments (<a href="https://github.com/docsifyjs/docsify/issues/1318">#1318</a>) (<a href="https://github.com/docsifyjs/docsify/commit/90d283d340502456a5d8495df596bb4a02ceb39b">90d283d</a>)</li>
+<li>fallback page should use path not file location (<a href="https://github.com/docsifyjs/docsify/issues/1301">#1301</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2bceabcb8e623570540493e2f1d956adf45c99e7">2bceabc</a>)</li>
+<li>Fix search error when exist translations documents (<a href="https://github.com/docsifyjs/docsify/issues/1300">#1300</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b8690199006366e86084e9e018def7b9b8f46512">b869019</a>)</li>
+<li>gitignore was ignoring folders in src, so VS Code search results or file fuzzy finder were not working, etc (<a href="https://github.com/docsifyjs/docsify/commit/d4c9247b87c0a2701683ed1a17383cfb451cf609">d4c9247</a>)</li>
+<li>packages/docsify-server-renderer/package.json &amp; packages/docsify-server-renderer/package-lock.json to reduce vulnerabilities (<a href="https://github.com/docsifyjs/docsify/issues/1250">#1250</a>) (<a href="https://github.com/docsifyjs/docsify/commit/d439bac93f479d0480799880538fc3104e54c907">d439bac</a>)</li>
+<li>search can not search the table header (<a href="https://github.com/docsifyjs/docsify/issues/1256">#1256</a>) (<a href="https://github.com/docsifyjs/docsify/commit/3f03e78418993d8e9a4f5062e10dc79c3753389e">3f03e78</a>)</li>
+<li>Search plugin: matched text is replaced with search text (<a href="https://github.com/docsifyjs/docsify/issues/1298">#1298</a>) (<a href="https://github.com/docsifyjs/docsify/commit/78775b6ee73102cc5ac71c0ee2b392c5f4f6f4f8">78775b6</a>)</li>
+<li>the uncaught typeerror when el is null (<a href="https://github.com/docsifyjs/docsify/issues/1308">#1308</a>) (<a href="https://github.com/docsifyjs/docsify/commit/952f4c921b7a6a558c500ca6b105582d39ad36a2">952f4c9</a>)</li>
+<li>Updated docs with instructions for installing specific version (fixes <a href="https://github.com/docsifyjs/docsify/issues/780">#780</a>) (<a href="https://github.com/docsifyjs/docsify/issues/1225">#1225</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b90c948090e89fa778279c95060dbd7668285658">b90c948</a>)</li>
+<li>upgrade medium-zoom from 1.0.5 to 1.0.6 (<a href="https://github.com/docsifyjs/docsify/commit/3beaa6666b78518f1ffaa37f6942f3cb08fef896">3beaa66</a>)</li>
+<li>upgrade tinydate from 1.2.0 to 1.3.0 (<a href="https://github.com/docsifyjs/docsify/issues/1341">#1341</a>) (<a href="https://github.com/docsifyjs/docsify/commit/59d090fe9096bc03e259c166634bb75bb2623f85">59d090f</a>)</li>
+</ul>
+<h3 id="features_3">Features<a class="headerlink" href="#features_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>search:</strong> add pathNamespaces option (<a href="https://github.com/docsifyjs/docsify/commit/d179dde1c71acdcbe66cb762377b123926c55bf2">d179dde</a>)</li>
+<li>Add title to sidebar links (<a href="https://github.com/docsifyjs/docsify/issues/1286">#1286</a>) (<a href="https://github.com/docsifyjs/docsify/commit/667496b85d99b168255f58e60a6bfe902cc6ee03">667496b</a>)</li>
+</ul>
+<h2 id="4114-2020-06-18"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.3...v4.11.4">4.11.4</a> (2020-06-18)<a class="headerlink" href="#4114-2020-06-18" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_6">Bug Fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>consistent location of search result (<a href="https://github.com/docsifyjs/docsify/commit/e9dd2de384b81619aae2bcbf92f52721cb76a177">e9dd2de</a>)</li>
+<li>cover overlapping sidebar by removing z-index (<a href="https://github.com/docsifyjs/docsify/commit/0bf03f58103037d100b1635cf3989c8d3672b4ba">0bf03f5</a>)</li>
+<li>cross-origin url cannot be redirected when  "externalLinkTarget" is set to "_self" and "routerMode" is set to "history". (<a href="https://github.com/docsifyjs/docsify/issues/1062">#1062</a>) (<a href="https://github.com/docsifyjs/docsify/commit/fd2cec6bd66c46d6957811fefae4c615c3052a4f">fd2cec6</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1046">#1046</a> <a href="https://github.com/docsifyjs/docsify/issues/1046">#1046</a> <a href="https://github.com/docsifyjs/docsify/issues/1046">#1046</a></li>
+<li>default html img resize if no height included (<a href="https://github.com/docsifyjs/docsify/issues/1065">#1065</a>) (<a href="https://github.com/docsifyjs/docsify/commit/9ff4d0677304bc190e7bd9e89bbbdc64895197fa">9ff4d06</a>)</li>
+<li>fixed target and rel issue (fixes <a href="https://github.com/docsifyjs/docsify/issues/1183">#1183</a>) (<a href="https://github.com/docsifyjs/docsify/commit/3d662a5bf71bbfef077cfbc478df241d794f55a0">3d662a5</a>)</li>
+<li>Inconsistent search and body rendering (<a href="https://github.com/docsifyjs/docsify/commit/dcb0aaea99efbd68175f1d1aeb5076b6dde9801e">dcb0aae</a>)</li>
+<li>rendering cover width bug (<a href="https://github.com/docsifyjs/docsify/commit/717991c90cf709f4da91fe32610129de6529266b">717991c</a>)</li>
+<li>search does not find the contents of the table (<a href="https://github.com/docsifyjs/docsify/issues/1198">#1198</a>) (<a href="https://github.com/docsifyjs/docsify/commit/31010e4979b3d3ab4bd247a09c4ac5fd1405eaa8">31010e4</a>)</li>
+<li>The search error after setting the ID in the title (<a href="https://github.com/docsifyjs/docsify/issues/1159">#1159</a>) (<a href="https://github.com/docsifyjs/docsify/commit/6e554f8ebd3d4a2c5c7e4f66cff3dfe2b6aa1e31">6e554f8</a>)</li>
+<li>upgrade docsify from 4.10.2 to 4.11.2 (<a href="https://github.com/docsifyjs/docsify/commit/60b7f89b373b0d48ec8406a51eddeaed8126696d">60b7f89</a>)</li>
+</ul>
+<h3 id="features_4">Features<a class="headerlink" href="#features_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>added html sanitizer for remote rendering (<a href="https://github.com/docsifyjs/docsify/issues/1128">#1128</a>) (<a href="https://github.com/docsifyjs/docsify/commit/714ef29afe779a6db5c4761ebaacdfc70ee2d8dd">714ef29</a>)</li>
+<li>update src/core/index.js to export all global APIs, deprecate old globals in favor of a single global DOCSIFY, and add tests for this (<a href="https://github.com/docsifyjs/docsify/commit/7e002bf939d7837843908417b5445b4f8d36c1cd">7e002bf</a>)</li>
+</ul>
+<h3 id="reverts">Reverts<a class="headerlink" href="#reverts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Revert "Updated docs site dark and light mode with switch and redesigned search bar using docsify-darklight-theme" (#1207) (<a href="https://github.com/docsifyjs/docsify/commit/26cb940b51d34ee584b8425012a336f38a4abd76">26cb940</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/1207">#1207</a> <a href="https://github.com/docsifyjs/docsify/issues/1182">#1182</a></li>
+</ul>
+<h2 id="4113-2020-03-24"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.2...v4.11.3">4.11.3</a> (2020-03-24)<a class="headerlink" href="#4113-2020-03-24" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_7">Bug Fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fix: digit issue with sidebar (complete REVERT to old method) (<a href="https://github.com/docsifyjs/docsify/commit/154abf59a6153e84b018fcdffa86892776d6da7d">154abf5</a>)</li>
+</ul>
+<h2 id="4112-2020-03-09"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.1...v4.11.2">4.11.2</a> (2020-03-09)<a class="headerlink" href="#4112-2020-03-09" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_8">Bug Fixes<a class="headerlink" href="#bug-fixes_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fixed rendering of color in coverpage issue (<a href="https://github.com/docsifyjs/docsify/commit/406670c3d619a627142900fd45019fb8ce00f60a">406670c</a>)</li>
+</ul>
+<h2 id="4111-2020-03-09"><a href="https://github.com/docsifyjs/docsify/compare/v4.11.0...v4.11.1">4.11.1</a> (2020-03-09)<a class="headerlink" href="#4111-2020-03-09" title="Permanent link">&para;</a></h2>
+<h1 id="4110-2020-03-09"><a href="https://github.com/docsifyjs/docsify/compare/v4.10.2...v4.11.0">4.11.0</a> (2020-03-09)<a class="headerlink" href="#4110-2020-03-09" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_9">Bug Fixes<a class="headerlink" href="#bug-fixes_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>emojis in titles not working correctly and update (<a href="https://github.com/docsifyjs/docsify/issues/1016">#1016</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b3d9b966dfbb6f456c2c457da1d2a366e85d9190">b3d9b96</a>)</li>
+<li>searching table content (<a href="https://github.com/docsifyjs/docsify/commit/6184e502629932ca71fdd0a1b10150d118f5a7c8">6184e50</a>)</li>
+<li>stage modified files as part of pre-commit hook (<a href="https://github.com/docsifyjs/docsify/issues/985">#985</a>) (<a href="https://github.com/docsifyjs/docsify/commit/5b77b0f628f056b7ebb6d0b617561d19964516a2">5b77b0f</a>)</li>
+<li>config initialization and coercion (<a href="https://github.com/docsifyjs/docsify/pull/861">#861</a>)</li>
+<li>strip indent when embedding code fragment (<a href="https://github.com/docsifyjs/docsify/pull/996">#996</a>)</li>
+<li>Ensure autoHeader dom result is similar to parsed H1 (<a href="https://github.com/docsifyjs/docsify/pull/811">#811</a>)</li>
+<li>upgrade docsify from 4.9.4 to 4.10.2 (<a href="https://github.com/docsifyjs/docsify/issues/1054">#1054</a>) (<a href="https://github.com/docsifyjs/docsify/commit/78290b21038a3ae09c4c7438bd89b14ca4c02805">78290b2</a>)</li>
+<li>upgrade medium-zoom from 1.0.4 to 1.0.5 (<a href="https://github.com/docsifyjs/docsify/commit/39ebd73021290439180878cae32e663b9e60e214">39ebd73</a>)</li>
+<li>upgrade prismjs from 1.17.1 to 1.19.0 (<a href="https://github.com/docsifyjs/docsify/commit/9981c4361ad690d0ed32cf1fb5b48cc5b9f770bb">9981c43</a>)</li>
+</ul>
+<h3 id="features_5">Features<a class="headerlink" href="#features_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>configure pre-commit hook (<a href="https://github.com/docsifyjs/docsify/issues/983">#983</a>) (<a href="https://github.com/docsifyjs/docsify/commit/eea41a1207c46533ea9c6c59d82e2c94aa4dd70e">eea41a1</a>)</li>
+<li>Add a prepare script. (<a href="https://github.com/docsifyjs/docsify/commit/efbea24de71f2287993b52ed1cef1a2dd6a53f81">efbea24</a>)</li>
+<li>added capability to add css class and id to images + links + refactoring (<a href="https://github.com/docsifyjs/docsify/issues/820">#820</a>) (<a href="https://github.com/docsifyjs/docsify/commit/724ac024ddfc28e93d8b5dd909e722747286fa00">724ac02</a>)</li>
+<li>added dark mode to docs closes <a href="https://github.com/docsifyjs/docsify/issues/1031">#1031</a> (<a href="https://github.com/docsifyjs/docsify/commit/dc43d3c512c2f04750e76176c25ece626ae7fe2a">dc43d3c</a>)</li>
+<li>new option <code>hideSidebar</code> (<a href="https://github.com/docsifyjs/docsify/issues/1026">#1026</a>) (<a href="https://github.com/docsifyjs/docsify/commit/b7547f151e928b3a0eb6a94b2af36023da4fa877">b7547f1</a>)</li>
+<li>new option <code>topMargin</code> (<a href="https://github.com/docsifyjs/docsify/pull/1045">#1045</a>) (<a href="https://github.com/docsifyjs/docsify/pull/1024/commits/b53ea1e304d3a2782b125c1d8711295d88faee03">8faee03</a>)</li>
+</ul>
+<h3 id="docs">Docs<a class="headerlink" href="#docs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>update docs for the <code>name</code> config option (<a href="https://github.com/docsifyjs/docsify/pull/992">#992</a>)</li>
+<li>about cache (<a href="https://github.com/docsifyjs/docsify/pull/854">#854</a>)</li>
+<li>removed FOSSA badge</li>
+<li>documented <code>__colon__</code> tip (<a href="https://github.com/docsifyjs/docsify/pull/1025">#1025</a>)</li>
+</ul>
+<h3 id="chore_1">Chore<a class="headerlink" href="#chore_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate relative links to absolute in embedded markdown (<a href="https://github.com/docsifyjs/docsify/pull/867">#867</a>)</li>
+<li>smarter scroll behavior (<a href="https://github.com/docsifyjs/docsify/pull/744">#744</a>)</li>
+<li>improve basic layout style (<a href="https://github.com/docsifyjs/docsify/pull/884">#884</a>)</li>
+<li>There are currently {three=&gt;four} themes available. (<a href="https://github.com/docsifyjs/docsify/pull/892">#892</a>)</li>
+<li>Added a redirect for images to show up in Amplify (<a href="https://github.com/docsifyjs/docsify/pull/918">#918</a>)</li>
+<li>removed the escaping of the name of sidebar (<a href="https://github.com/docsifyjs/docsify/pull/991">#991</a>)</li>
+<li>Eslint fixes for v4x (<a href="https://github.com/docsifyjs/docsify/pull/989">#989</a>)</li>
+<li>added github Actions for CI (<a href="https://github.com/docsifyjs/docsify/pull/1000">#1000</a>)</li>
+<li>Add a prepare script. (<a href="https://github.com/docsifyjs/docsify/pull/1010">#1010</a>)</li>
+<li>chore(GH-action): using ubuntu 16 and removed node 8 from CI</li>
+<li>chore: add config (<a href="https://github.com/docsifyjs/docsify/pull/1014">#1014</a>)</li>
+<li>chore(stale): added enhancement label to exemptlabels</li>
+<li>chore(stale): added bug label to exemptlabels</li>
+<li>.markdown-section max-width 800px to 80% (<a href="https://github.com/docsifyjs/docsify/pull/1017">#1017</a>)</li>
+<li>changed the CDN from unpkg to jsDelivr #1020 (<a href="https://github.com/docsifyjs/docsify/pull/1022">#1022</a>)</li>
+<li>migrate CI to github, refactore CI and npm scripts, linting fixes (<a href="https://github.com/docsifyjs/docsify/pull/1023">#1023</a>)</li>
+<li>chore(readme): added CI badges and fixed the logo issue</li>
+<li>added new linter config (<a href="https://github.com/docsifyjs/docsify/pull/1028">#1028</a>)</li>
+</ul>
+<h2 id="4102-2019-12-16"><a href="https://github.com/docsifyjs/docsify/compare/v4.10.0...v4.10.2">4.10.2</a> (2019-12-16)<a class="headerlink" href="#4102-2019-12-16" title="Permanent link">&para;</a></h2>
+<h1 id="4100-2019-12-16"><a href="https://github.com/docsifyjs/docsify/compare/v4.9.4...v4.10.0">4.10.0</a> (2019-12-16)<a class="headerlink" href="#4100-2019-12-16" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_10">Bug Fixes<a class="headerlink" href="#bug-fixes_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fixed security alert for chokidar(update dep) (<a href="https://github.com/docsifyjs/docsify/commit/a62b037becb36941c11c8eab6e4d83df8db85af3">a62b037</a>)</li>
+<li>npm audit issues (<a href="https://github.com/docsifyjs/docsify/issues/934">#934</a>) (<a href="https://github.com/docsifyjs/docsify/commit/615205cfdb7aea8f37a1ec5dd928105eeef56357">615205c</a>)</li>
+<li>package security alerts (<a href="https://github.com/docsifyjs/docsify/commit/f5f15619f1a239d6ce12a2f83ad8817352a3352b">f5f1561</a>)</li>
+<li>security alerts of cssnano (<a href="https://github.com/docsifyjs/docsify/commit/d7d5c8f302d7c18dbb32e982202a07b73badf6f6">d7d5c8f</a>)</li>
+</ul>
+<p><a name="4.9.4"></a></p>
+<h2 id="494-2019-05-05"><a href="https://github.com/docsifyjs/docsify/compare/v4.9.2...v4.9.4">4.9.4</a> (2019-05-05)<a class="headerlink" href="#494-2019-05-05" title="Permanent link">&para;</a></h2>
+<p><a name="4.9.2"></a></p>
+<h2 id="492-2019-04-21"><a href="https://github.com/docsifyjs/docsify/compare/v4.9.1...v4.9.2">4.9.2</a> (2019-04-21)<a class="headerlink" href="#492-2019-04-21" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_11">Bug Fixes<a class="headerlink" href="#bug-fixes_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>re-render gitalk when router changed (<a href="https://github.com/docsifyjs/docsify/commit/11ea1f8">11ea1f8</a>)</li>
+</ul>
+<h3 id="features_6">Features<a class="headerlink" href="#features_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>allows relative path, fixed <a href="https://github.com/docsifyjs/docsify/issues/590">#590</a> (<a href="https://github.com/docsifyjs/docsify/commit/31654f1">31654f1</a>)</li>
+</ul>
+<p><a name="4.9.1"></a></p>
+<h2 id="491-2019-02-21"><a href="https://github.com/docsifyjs/docsify/compare/v4.9.0...v4.9.1">4.9.1</a> (2019-02-21)<a class="headerlink" href="#491-2019-02-21" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_12">Bug Fixes<a class="headerlink" href="#bug-fixes_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>github assets url (<a href="https://github.com/docsifyjs/docsify/issues/774">#774</a>) (<a href="https://github.com/docsifyjs/docsify/commit/140bf10">140bf10</a>)</li>
+</ul>
+<p><a name="4.9.0"></a></p>
+<h1 id="490-2019-02-19"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.6...v4.9.0">4.9.0</a> (2019-02-19)<a class="headerlink" href="#490-2019-02-19" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_13">Bug Fixes<a class="headerlink" href="#bug-fixes_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>task list rendering (Fix <a href="https://github.com/docsifyjs/docsify/issues/749">#749</a>) (<a href="https://github.com/docsifyjs/docsify/issues/757">#757</a>) (<a href="https://github.com/docsifyjs/docsify/commit/69ef489">69ef489</a>)</li>
+<li>upgrade npm-run-all (<a href="https://github.com/docsifyjs/docsify/commit/049726e">049726e</a>)</li>
+</ul>
+<h3 id="features_7">Features<a class="headerlink" href="#features_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>search-plugin:</strong> add namespace option (<a href="https://github.com/docsifyjs/docsify/issues/706">#706</a>) (<a href="https://github.com/docsifyjs/docsify/commit/28beff8">28beff8</a>)</li>
+<li>Add new theme "dolphin" (<a href="https://github.com/docsifyjs/docsify/issues/735">#735</a>) (<a href="https://github.com/docsifyjs/docsify/commit/c3345ba">c3345ba</a>)</li>
+<li>Provide code fragments feature (<a href="https://github.com/docsifyjs/docsify/issues/748">#748</a>) (<a href="https://github.com/docsifyjs/docsify/commit/1447c8a">1447c8a</a>)</li>
+</ul>
+<p><a name="4.8.6"></a></p>
+<h2 id="486-2018-11-12"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.5...v4.8.6">4.8.6</a> (2018-11-12)<a class="headerlink" href="#486-2018-11-12" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_14">Bug Fixes<a class="headerlink" href="#bug-fixes_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>IE10 compatibility (<a href="https://github.com/docsifyjs/docsify/issues/691">#691</a>) (<a href="https://github.com/docsifyjs/docsify/commit/4db8cd6">4db8cd6</a>)</li>
+</ul>
+<p><a name="4.8.5"></a></p>
+<h2 id="485-2018-11-02"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.4...v4.8.5">4.8.5</a> (2018-11-02)<a class="headerlink" href="#485-2018-11-02" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_15">Bug Fixes<a class="headerlink" href="#bug-fixes_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>expose version info for Docsify, fixed <a href="https://github.com/docsifyjs/docsify/issues/641">#641</a> (<a href="https://github.com/docsifyjs/docsify/commit/aa719e3">aa719e3</a>)</li>
+</ul>
+<p><a name="4.8.4"></a></p>
+<h2 id="484-2018-11-01"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.3...v4.8.4">4.8.4</a> (2018-11-01)<a class="headerlink" href="#484-2018-11-01" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_16">Bug Fixes<a class="headerlink" href="#bug-fixes_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>cover:</strong> Compatible with legacy styles, fixed <a href="https://github.com/docsifyjs/docsify/issues/677">#677</a> (<a href="https://github.com/docsifyjs/docsify/issues/678">#678</a>) (<a href="https://github.com/docsifyjs/docsify/commit/1a945d4">1a945d4</a>)</li>
+</ul>
+<p><a name="4.8.3"></a></p>
+<h2 id="483-2018-11-01"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.2...v4.8.3">4.8.3</a> (2018-11-01)<a class="headerlink" href="#483-2018-11-01" title="Permanent link">&para;</a></h2>
+<p>Fix the last release files has the old version marked...</p>
+<p><a name="4.8.2"></a></p>
+<h2 id="482-2018-11-01"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.1...v4.8.2">4.8.2</a> (2018-11-01)<a class="headerlink" href="#482-2018-11-01" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_17">Bug Fixes<a class="headerlink" href="#bug-fixes_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cover button style, fixed <a href="https://github.com/docsifyjs/docsify/issues/670">#670</a>, fixed <a href="https://github.com/docsifyjs/docsify/issues/665">#665</a> (<a href="https://github.com/docsifyjs/docsify/issues/675">#675</a>) (<a href="https://github.com/docsifyjs/docsify/commit/fcd1087">fcd1087</a>)</li>
+<li>update match regex (<a href="https://github.com/docsifyjs/docsify/issues/669">#669</a>) (<a href="https://github.com/docsifyjs/docsify/commit/2edf47e">2edf47e</a>)</li>
+<li>use copy of cached value (<a href="https://github.com/docsifyjs/docsify/issues/668">#668</a>) (<a href="https://github.com/docsifyjs/docsify/commit/5fcf210">5fcf210</a>)</li>
+<li><strong>compiler:</strong> import prism-markup-templating, fixed <a href="https://github.com/docsifyjs/docsify/issues/672">#672</a> (<a href="https://github.com/docsifyjs/docsify/issues/676">#676</a>) (<a href="https://github.com/docsifyjs/docsify/commit/fdd8826">fdd8826</a>)</li>
+</ul>
+<h3 id="features_8">Features<a class="headerlink" href="#features_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add heading config id (<a href="https://github.com/docsifyjs/docsify/issues/671">#671</a>) (<a href="https://github.com/docsifyjs/docsify/commit/ab19b13">ab19b13</a>)</li>
+</ul>
+<p><a name="4.8.1"></a></p>
+<h2 id="481-2018-10-31"><a href="https://github.com/docsifyjs/docsify/compare/v4.8.0...v4.8.1">4.8.1</a> (2018-10-31)<a class="headerlink" href="#481-2018-10-31" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_18">Bug Fixes<a class="headerlink" href="#bug-fixes_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ssr package dep, fixed <a href="https://github.com/docsifyjs/docsify/issues/605">#605</a> (<a href="https://github.com/docsifyjs/docsify/commit/2bc880d">2bc880d</a>)</li>
+<li><strong>compiler:</strong> extra quotes for codeblock (<a href="https://github.com/docsifyjs/docsify/commit/4f588e0">4f588e0</a>)</li>
+<li><strong>compiler:</strong> prevent render of html code in paragraph, fixed <a href="https://github.com/docsifyjs/docsify/issues/663">#663</a> (<a href="https://github.com/docsifyjs/docsify/commit/d35059d">d35059d</a>)</li>
+</ul>
+<h3 id="features_9">Features<a class="headerlink" href="#features_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>upgrade PrismJS, fixed <a href="https://github.com/docsifyjs/docsify/issues/534">#534</a> (<a href="https://github.com/docsifyjs/docsify/commit/4805cb5">4805cb5</a>)</li>
+</ul>
+<p><a name="4.8.0"></a></p>
+<h1 id="480-2018-10-31"><a href="https://github.com/docsifyjs/docsify/compare/v4.7.1...v4.8.0">4.8.0</a> (2018-10-31)<a class="headerlink" href="#480-2018-10-31" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_19">Bug Fixes<a class="headerlink" href="#bug-fixes_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cache TOC for later usage in the case of cached file html (<a href="https://github.com/docsifyjs/docsify/issues/649">#649</a>) (<a href="https://github.com/docsifyjs/docsify/commit/9e86017">9e86017</a>)</li>
+<li>improve external script plugin (<a href="https://github.com/docsifyjs/docsify/issues/632">#632</a>) (<a href="https://github.com/docsifyjs/docsify/commit/50c2434">50c2434</a>)</li>
+<li>missing variable declaration (<a href="https://github.com/docsifyjs/docsify/issues/660">#660</a>) (<a href="https://github.com/docsifyjs/docsify/commit/1ce37bd">1ce37bd</a>)</li>
+<li>Remove target for mailto links (<a href="https://github.com/docsifyjs/docsify/issues/652">#652</a>) (<a href="https://github.com/docsifyjs/docsify/commit/18f0f03">18f0f03</a>)</li>
+<li>Update getAllPath query selector (<a href="https://github.com/docsifyjs/docsify/issues/653">#653</a>) (<a href="https://github.com/docsifyjs/docsify/commit/f6f4e32">f6f4e32</a>)</li>
+<li>Update vue.styl (<a href="https://github.com/docsifyjs/docsify/issues/634">#634</a>) (<a href="https://github.com/docsifyjs/docsify/commit/bf060be">bf060be</a>)</li>
+</ul>
+<h3 id="features_10">Features<a class="headerlink" href="#features_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add docsify version to $window.docsify object (<a href="https://github.com/docsifyjs/docsify/issues/641">#641</a>) (<a href="https://github.com/docsifyjs/docsify/commit/94bc415">94bc415</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/521">#521</a></li>
+<li><strong>compiler:</strong> support embedded mermaid (<a href="https://github.com/docsifyjs/docsify/issues/629">#629</a>) (<a href="https://github.com/docsifyjs/docsify/commit/42ea8af">42ea8af</a>)</li>
+<li>Add hideOtherSidebarContent option (<a href="https://github.com/docsifyjs/docsify/issues/661">#661</a>) (<a href="https://github.com/docsifyjs/docsify/commit/4a23c4a">4a23c4a</a>)</li>
+<li>Allow base64, external, and relative logo values (<a href="https://github.com/docsifyjs/docsify/issues/642">#642</a>) (<a href="https://github.com/docsifyjs/docsify/commit/0a0802a">0a0802a</a>), closes <a href="https://github.com/docsifyjs/docsify/issues/577">#577</a></li>
+<li>upgrade marked to 0.5.x, fixed <a href="https://github.com/docsifyjs/docsify/issues/645">#645</a>, close <a href="https://github.com/docsifyjs/docsify/issues/644">#644</a> (<a href="https://github.com/docsifyjs/docsify/issues/662">#662</a>) (<a href="https://github.com/docsifyjs/docsify/commit/a39b214">a39b214</a>)</li>
+</ul>
+<p><a name="4.7.1"></a></p>
+<h2 id="471-2018-08-30"><a href="https://github.com/docsifyjs/docsify/compare/v4.7.0...v4.7.1">4.7.1</a> (2018-08-30)<a class="headerlink" href="#471-2018-08-30" title="Permanent link">&para;</a></h2>
+<p><a name="4.7.0"></a></p>
+<h1 id="470-2018-06-29"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.9...v4.7.0">4.7.0</a> (2018-06-29)<a class="headerlink" href="#470-2018-06-29" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_20">Bug Fixes<a class="headerlink" href="#bug-fixes_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>alldow addition content in sidebar, fix <a href="https://github.com/QingWei-Li/docsify/issues/518">#518</a>, fix 539 (<a href="https://github.com/QingWei-Li/docsify/issues/543">#543</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/04b36b0">04b36b0</a>)</li>
+<li>async install config, fixed <a href="https://github.com/QingWei-Li/docsify/issues/425">#425</a> (<a href="https://github.com/QingWei-Li/docsify/commit/e4e011c">e4e011c</a>)</li>
+<li>loading embed files synchronously, fixed <a href="https://github.com/QingWei-Li/docsify/issues/525">#525</a>, fixed <a href="https://github.com/QingWei-Li/docsify/issues/527">#527</a> (<a href="https://github.com/QingWei-Li/docsify/issues/544">#544</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/feea7f9">feea7f9</a>)</li>
+<li>path include chinese character cause hilight bug (<a href="https://github.com/QingWei-Li/docsify/issues/556">#556</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/a5f333a">a5f333a</a>)</li>
+</ul>
+<h3 id="features_11">Features<a class="headerlink" href="#features_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add logo option, <a href="https://github.com/QingWei-Li/docsify/issues/264">#264</a> (<a href="https://github.com/QingWei-Li/docsify/issues/541">#541</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/ee72dd0">ee72dd0</a>)</li>
+<li>add unpkg field, close <a href="https://github.com/QingWei-Li/docsify/issues/531">#531</a> (<a href="https://github.com/QingWei-Li/docsify/issues/558">#558</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/5c0de0a">5c0de0a</a>)</li>
+<li>support image resizing, resolve <a href="https://github.com/QingWei-Li/docsify/issues/508">#508</a> (<a href="https://github.com/QingWei-Li/docsify/issues/545">#545</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/3a7ad62">3a7ad62</a>)</li>
+</ul>
+<p><a name="4.6.10"></a></p>
+<h2 id="4610-2018-03-25"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.9...v4.6.10">4.6.10</a> (2018-03-25)<a class="headerlink" href="#4610-2018-03-25" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_21">Bug Fixes<a class="headerlink" href="#bug-fixes_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>async install config, fixed <a href="https://github.com/QingWei-Li/docsify/issues/425">#425</a> (<a href="https://github.com/QingWei-Li/docsify/commit/e4e011c">e4e011c</a>)</li>
+</ul>
+<p><a name="4.6.9"></a></p>
+<h2 id="469-2018-03-10"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.8...v4.6.9">4.6.9</a> (2018-03-10)<a class="headerlink" href="#469-2018-03-10" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_22">Bug Fixes<a class="headerlink" href="#bug-fixes_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>upgrade medium-zoom, fixed <a href="https://github.com/QingWei-Li/docsify/issues/417">#417</a> (<a href="https://github.com/QingWei-Li/docsify/commit/6a3d69a">6a3d69a</a>)</li>
+</ul>
+<p><a name="4.6.8"></a></p>
+<h2 id="468-2018-03-06"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.7...v4.6.8">4.6.8</a> (2018-03-06)<a class="headerlink" href="#468-2018-03-06" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_23">Bug Fixes<a class="headerlink" href="#bug-fixes_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>resolve path of image and embed files, fixed <a href="https://github.com/QingWei-Li/docsify/issues/412">#412</a> (<a href="https://github.com/QingWei-Li/docsify/commit/bfd0d18">bfd0d18</a>)</li>
+</ul>
+<p><a name="4.6.7"></a></p>
+<h2 id="467-2018-03-03"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.6...v4.6.7">4.6.7</a> (2018-03-03)<a class="headerlink" href="#467-2018-03-03" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_24">Bug Fixes<a class="headerlink" href="#bug-fixes_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>layout css, fixed <a href="https://github.com/QingWei-Li/docsify/issues/409">#409</a> (<a href="https://github.com/QingWei-Li/docsify/commit/aeb692e">aeb692e</a>)</li>
+</ul>
+<p><a name="4.6.6"></a></p>
+<h2 id="466-2018-03-03"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.5...v4.6.6">4.6.6</a> (2018-03-03)<a class="headerlink" href="#466-2018-03-03" title="Permanent link">&para;</a></h2>
+<p><a name="4.6.5"></a></p>
+<h2 id="465-2018-03-03"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.4...v4.6.5">4.6.5</a> (2018-03-03)<a class="headerlink" href="#465-2018-03-03" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_25">Bug Fixes<a class="headerlink" href="#bug-fixes_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>navbar:</strong> Now Navbar isn't append to DOM when loadNavbar is falsy (<a href="https://github.com/QingWei-Li/docsify/issues/407">#407</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/0933445">0933445</a>)</li>
+</ul>
+<h3 id="features_12">Features<a class="headerlink" href="#features_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>config:</strong> Add 404 page options. (<a href="https://github.com/QingWei-Li/docsify/issues/406">#406</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/9b3b445">9b3b445</a>)</li>
+</ul>
+<p><a name="4.6.4"></a></p>
+<h2 id="464-2018-03-01"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.3...v4.6.4">4.6.4</a> (2018-03-01)<a class="headerlink" href="#464-2018-03-01" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_26">Bug Fixes<a class="headerlink" href="#bug-fixes_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>render:</strong> Disable markdown parsing when the file is an HTML (<a href="https://github.com/QingWei-Li/docsify/issues/403">#403</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/278a75e">278a75e</a>)</li>
+</ul>
+<h3 id="features_13">Features<a class="headerlink" href="#features_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>fetch:</strong> Add fallback languages configuration. (<a href="https://github.com/QingWei-Li/docsify/issues/402">#402</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/ecc0e04">ecc0e04</a>)</li>
+</ul>
+<p><a name="4.6.3"></a></p>
+<h2 id="463-2018-02-15"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.2...v4.6.3">4.6.3</a> (2018-02-15)<a class="headerlink" href="#463-2018-02-15" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_27">Bug Fixes<a class="headerlink" href="#bug-fixes_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>hook:</strong> beforeEach don\'t work, fixed <a href="https://github.com/QingWei-Li/docsify/issues/393">#393</a> (<a href="https://github.com/QingWei-Li/docsify/commit/6a09059">6a09059</a>)</li>
+</ul>
+<p><a name="4.6.2"></a></p>
+<h2 id="462-2018-02-14"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.1...v4.6.2">4.6.2</a> (2018-02-14)<a class="headerlink" href="#462-2018-02-14" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_28">Bug Fixes<a class="headerlink" href="#bug-fixes_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>embed:</strong> broken in IE, fixed <a href="https://github.com/QingWei-Li/docsify/issues/389">#389</a>, fixed <a href="https://github.com/QingWei-Li/docsify/issues/391">#391</a> (<a href="https://github.com/QingWei-Li/docsify/commit/45a7464">45a7464</a>)</li>
+<li><strong>embed:</strong> init value (<a href="https://github.com/QingWei-Li/docsify/commit/890a7bf">890a7bf</a>)</li>
+</ul>
+<p><a name="4.6.1"></a></p>
+<h2 id="461-2018-02-12"><a href="https://github.com/QingWei-Li/docsify/compare/v4.6.0...v4.6.1">4.6.1</a> (2018-02-12)<a class="headerlink" href="#461-2018-02-12" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_29">Bug Fixes<a class="headerlink" href="#bug-fixes_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>embed</strong> compatible ssr (<a href="https://github.com/QingWei-Li/docsify/commit/dc0c3ce">dc0c3ce</a>)</li>
+<li><strong>embed</strong> async fetch embed files, fixed <a href="https://github.com/QingWei-Li/docsify/issues/387">#387</a></li>
+</ul>
+<p><a name="4.6.0"></a></p>
+<h1 id="460-2018-02-11"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.9...v4.6.0">4.6.0</a> (2018-02-11)<a class="headerlink" href="#460-2018-02-11" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_30">Bug Fixes<a class="headerlink" href="#bug-fixes_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>search:</strong> custom clear button, fixed <a href="https://github.com/QingWei-Li/docsify/issues/271">#271</a> (<a href="https://github.com/QingWei-Li/docsify/commit/864aa18">864aa18</a>)</li>
+<li><strong>search:</strong> escape special characters for search, fixed <a href="https://github.com/QingWei-Li/docsify/issues/369">#369</a> (<a href="https://github.com/QingWei-Li/docsify/commit/9755439">9755439</a>)</li>
+<li>build config (<a href="https://github.com/QingWei-Li/docsify/commit/342438f">342438f</a>)</li>
+<li>button style for coverpage, fixed <a href="https://github.com/QingWei-Li/docsify/issues/362">#362</a> (<a href="https://github.com/QingWei-Li/docsify/commit/85428ef">85428ef</a>)</li>
+<li>dropdown scroll style, fixed <a href="https://github.com/QingWei-Li/docsify/issues/346">#346</a> (<a href="https://github.com/QingWei-Li/docsify/commit/c4d83f2">c4d83f2</a>)</li>
+<li>highlight homepage link, fixed <a href="https://github.com/QingWei-Li/docsify/issues/304">#304</a> (<a href="https://github.com/QingWei-Li/docsify/commit/f960c19">f960c19</a>)</li>
+<li>homepage link (<a href="https://github.com/QingWei-Li/docsify/commit/e097f88">e097f88</a>)</li>
+<li>onlyCover (<a href="https://github.com/QingWei-Li/docsify/commit/033be4f">033be4f</a>)</li>
+<li>ssr compatible embedd (<a href="https://github.com/QingWei-Li/docsify/commit/ebc10c4">ebc10c4</a>)</li>
+<li>ssr coverpage, fixed <a href="https://github.com/QingWei-Li/docsify/issues/273">#273</a> (<a href="https://github.com/QingWei-Li/docsify/commit/9e824a4">9e824a4</a>)</li>
+</ul>
+<h3 id="features_14">Features<a class="headerlink" href="#features_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>click sidebar menu add collapse and expand, close <a href="https://github.com/QingWei-Li/docsify/issues/294">#294</a> (<a href="https://github.com/QingWei-Li/docsify/commit/5e161a1">5e161a1</a>)</li>
+<li><strong>compiler:</strong> support embedded file as code block, close <a href="https://github.com/QingWei-Li/docsify/issues/134">#134</a> (<a href="https://github.com/QingWei-Li/docsify/commit/761ccc2">761ccc2</a>)</li>
+<li><strong>compiler:</strong> support embedded markdown, html, video, etc files, close <a href="https://github.com/QingWei-Li/docsify/issues/383">#383</a>, close <a href="https://github.com/QingWei-Li/docsify/issues/333">#333</a> (<a href="https://github.com/QingWei-Li/docsify/commit/524f52f">524f52f</a>)</li>
+<li><strong>cover:</strong> add onlyCover option, close <a href="https://github.com/QingWei-Li/docsify/issues/382">#382</a> (<a href="https://github.com/QingWei-Li/docsify/commit/b265fdd">b265fdd</a>)</li>
+<li><strong>fetch:</strong> add requestHeaders option, fixed <a href="https://github.com/QingWei-Li/docsify/issues/336">#336</a> (<a href="https://github.com/QingWei-Li/docsify/commit/54ab4c9">54ab4c9</a>)</li>
+<li><strong>render:</strong> add ext option for custom file extension, close <a href="https://github.com/QingWei-Li/docsify/issues/340">#340</a> (<a href="https://github.com/QingWei-Li/docsify/commit/248aa72">248aa72</a>)</li>
+<li><strong>render:</strong> mutilple coverpage, close <a href="https://github.com/QingWei-Li/docsify/issues/315">#315</a> (<a href="https://github.com/QingWei-Li/docsify/commit/f68ddf5">f68ddf5</a>)</li>
+</ul>
+<p><a name="4.5.9"></a></p>
+<h2 id="459-2018-02-07"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.8...v4.5.9">4.5.9</a> (2018-02-07)<a class="headerlink" href="#459-2018-02-07" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_31">Bug Fixes<a class="headerlink" href="#bug-fixes_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>upgrade marked (<a href="https://github.com/QingWei-Li/docsify/commit/4157173">4157173</a>)</li>
+</ul>
+<p><a name="4.5.8"></a></p>
+<h2 id="458-2018-02-07"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.6...v4.5.8">4.5.8</a> (2018-02-07)<a class="headerlink" href="#458-2018-02-07" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_32">Bug Fixes<a class="headerlink" href="#bug-fixes_32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cover style, fixed <a href="https://github.com/QingWei-Li/docsify/issues/381">#381</a> (<a href="https://github.com/QingWei-Li/docsify/commit/368754e">368754e</a>)</li>
+<li>updated deps (<a href="https://github.com/QingWei-Li/docsify/issues/337">#337</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/a12d393">a12d393</a>)</li>
+</ul>
+<p><a name="4.5.7"></a></p>
+<h2 id="457-2017-12-29"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.6...v4.5.7">4.5.7</a> (2017-12-29)<a class="headerlink" href="#457-2017-12-29" title="Permanent link">&para;</a></h2>
+<h3 id="features_15">Features<a class="headerlink" href="#features_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add navigation plugin, closed <a href="https://github.com/QingWei-Li/docsify/issues/180">#180</a> (<a href="https://github.com/QingWei-Li/docsify/commit/f78be4c">f78be4c</a>)</li>
+</ul>
+<p><a name="4.5.6"></a></p>
+<h2 id="456-2017-12-14"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.3...v4.5.6">4.5.6</a> (2017-12-14)<a class="headerlink" href="#456-2017-12-14" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_33">Bug Fixes<a class="headerlink" href="#bug-fixes_33" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>style:</strong> increase the tap targets of menu button, fixed <a href="https://github.com/QingWei-Li/docsify/issues/325">#325</a> (<a href="https://github.com/QingWei-Li/docsify/commit/888f217">888f217</a>)</li>
+</ul>
+<p><a name="4.5.5"></a></p>
+<h2 id="455-2017-11-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.4...v4.5.5">4.5.5</a> (2017-11-30)<a class="headerlink" href="#455-2017-11-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_34">Bug Fixes<a class="headerlink" href="#bug-fixes_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>disqus plugin issue (<a href="https://github.com/QingWei-Li/docsify/issues/318">#318</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/041b33e">041b33e</a>), closes <a href="https://github.com/QingWei-Li/docsify/issues/317">#317</a></li>
+</ul>
+<p><a name="4.5.4"></a></p>
+<h2 id="454-2017-11-29"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.2...v4.5.4">4.5.4</a> (2017-11-29)<a class="headerlink" href="#454-2017-11-29" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_35">Bug Fixes<a class="headerlink" href="#bug-fixes_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>compiler:</strong> task lists style, fixed <a href="https://github.com/QingWei-Li/docsify/issues/215">#215</a> (<a href="https://github.com/QingWei-Li/docsify/commit/e43ded4">e43ded4</a>)</li>
+</ul>
+<h3 id="features_16">Features<a class="headerlink" href="#features_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add gitalk plugin (<a href="https://github.com/QingWei-Li/docsify/issues/306">#306</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/9208e64">9208e64</a>)</li>
+</ul>
+<p><a name="4.5.3"></a></p>
+<h2 id="453-2017-11-11"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.2...v4.5.3">4.5.3</a> (2017-11-11)<a class="headerlink" href="#453-2017-11-11" title="Permanent link">&para;</a></h2>
+<h3 id="features_17">Features<a class="headerlink" href="#features_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add gitalk plugin (<a href="https://github.com/QingWei-Li/docsify/issues/306">#306</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/9208e64">9208e64</a>)</li>
+</ul>
+<p><a name="4.5.2"></a></p>
+<h2 id="452-2017-11-09"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.1...v4.5.2">4.5.2</a> (2017-11-09)<a class="headerlink" href="#452-2017-11-09" title="Permanent link">&para;</a></h2>
+<h3 id="features_18">Features<a class="headerlink" href="#features_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>github task lists, close <a href="https://github.com/QingWei-Li/docsify/issues/215">#215</a> (<a href="https://github.com/QingWei-Li/docsify/issues/305">#305</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/d486eef">d486eef</a>)</li>
+</ul>
+<p><a name="4.5.1"></a></p>
+<h2 id="451-2017-11-07"><a href="https://github.com/QingWei-Li/docsify/compare/v4.5.0...v4.5.1">4.5.1</a> (2017-11-07)<a class="headerlink" href="#451-2017-11-07" title="Permanent link">&para;</a></h2>
+<h3 id="features_19">Features<a class="headerlink" href="#features_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fetch files with the query params, fixed <a href="https://github.com/QingWei-Li/docsify/issues/303">#303</a> (<a href="https://github.com/QingWei-Li/docsify/commit/2a2ed96">2a2ed96</a>)</li>
+</ul>
+<p><a name="4.5.0"></a></p>
+<h1 id="450-2017-11-04"><a href="https://github.com/QingWei-Li/docsify/compare/v4.4.1...v4.5.0">4.5.0</a> (2017-11-04)<a class="headerlink" href="#450-2017-11-04" title="Permanent link">&para;</a></h1>
+<h3 id="features_20">Features<a class="headerlink" href="#features_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add disqus plugin, closed <a href="https://github.com/QingWei-Li/docsify/issues/123">#123</a> (<a href="https://github.com/QingWei-Li/docsify/commit/fd7d4e0">fd7d4e0</a>)</li>
+</ul>
+<p><a name="4.4.1"></a></p>
+<h2 id="441-2017-10-31"><a href="https://github.com/QingWei-Li/docsify/compare/v4.4.0...v4.4.1">4.4.1</a> (2017-10-31)<a class="headerlink" href="#441-2017-10-31" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_36">Bug Fixes<a class="headerlink" href="#bug-fixes_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>{docsify-ignore-all} and {docsify-ignore} bug (<a href="https://github.com/QingWei-Li/docsify/issues/299">#299</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/cc98f56">cc98f56</a>)</li>
+<li>zoom image plugin issue, fixed <a href="https://github.com/QingWei-Li/docsify/issues/187">#187</a> (<a href="https://github.com/QingWei-Li/docsify/issues/300">#300</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/fa772cf">fa772cf</a>)</li>
+</ul>
+<p><a name="4.4.0"></a></p>
+<h1 id="440-2017-10-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.15...v4.4.0">4.4.0</a> (2017-10-30)<a class="headerlink" href="#440-2017-10-30" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_37">Bug Fixes<a class="headerlink" href="#bug-fixes_37" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sidebar style issue on firefox, fixed <a href="https://github.com/QingWei-Li/docsify/issues/184">#184</a> (<a href="https://github.com/QingWei-Li/docsify/issues/297">#297</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/36bfc9d">36bfc9d</a>)</li>
+</ul>
+<h3 id="features_21">Features<a class="headerlink" href="#features_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add helper for disabled link, fixed <a href="https://github.com/QingWei-Li/docsify/issues/295">#295</a> (<a href="https://github.com/QingWei-Li/docsify/issues/296">#296</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/4ad96f3">4ad96f3</a>)</li>
+</ul>
+<p><a name="4.3.15"></a></p>
+<h2 id="4315-2017-10-20"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.14...v4.3.15">4.3.15</a> (2017-10-20)<a class="headerlink" href="#4315-2017-10-20" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_38">Bug Fixes<a class="headerlink" href="#bug-fixes_38" title="Permanent link">&para;</a></h3>
+<ul>
+<li>scroll active sidebar (<a href="https://github.com/QingWei-Li/docsify/commit/a2b8eae">a2b8eae</a>)</li>
+</ul>
+<p><a name="4.3.14"></a></p>
+<h2 id="4314-2017-10-20"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.13...v4.3.14">4.3.14</a> (2017-10-20)<a class="headerlink" href="#4314-2017-10-20" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_39">Bug Fixes<a class="headerlink" href="#bug-fixes_39" title="Permanent link">&para;</a></h3>
+<ul>
+<li>codesponsor style (<a href="https://github.com/QingWei-Li/docsify/commit/ab68268">ab68268</a>)</li>
+</ul>
+<p><a name="4.3.13"></a></p>
+<h2 id="4313-2017-10-17"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.12...v4.3.13">4.3.13</a> (2017-10-17)<a class="headerlink" href="#4313-2017-10-17" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_40">Bug Fixes<a class="headerlink" href="#bug-fixes_40" title="Permanent link">&para;</a></h3>
+<ul>
+<li>duplicate results in search fixed <a href="https://github.com/QingWei-Li/docsify/issues/257">#257</a> (<a href="https://github.com/QingWei-Li/docsify/issues/284">#284</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/3476f6f">3476f6f</a>)</li>
+</ul>
+<h3 id="features_22">Features<a class="headerlink" href="#features_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>make whole search result clickable (<a href="https://github.com/QingWei-Li/docsify/issues/285">#285</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/1b91227">1b91227</a>)</li>
+</ul>
+<p><a name="4.3.12"></a></p>
+<h2 id="4312-2017-10-15"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.11...v4.3.12">4.3.12</a> (2017-10-15)<a class="headerlink" href="#4312-2017-10-15" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_41">Bug Fixes<a class="headerlink" href="#bug-fixes_41" title="Permanent link">&para;</a></h3>
+<ul>
+<li>incorrect active link (<a href="https://github.com/QingWei-Li/docsify/issues/281">#281</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/a3ab379">a3ab379</a>)</li>
+</ul>
+<p><a name="4.3.11"></a></p>
+<h2 id="4311-2017-10-15"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.10...v4.3.11">4.3.11</a> (2017-10-15)<a class="headerlink" href="#4311-2017-10-15" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_42">Bug Fixes<a class="headerlink" href="#bug-fixes_42" title="Permanent link">&para;</a></h3>
+<ul>
+<li>broken links to same page heading, fix <a href="https://github.com/QingWei-Li/docsify/issues/278">#278</a>, fix <a href="https://github.com/QingWei-Li/docsify/issues/279">#279</a> (<a href="https://github.com/QingWei-Li/docsify/commit/91d6337">91d6337</a>)</li>
+</ul>
+<p><a name="4.3.10"></a></p>
+<h2 id="4310-2017-10-12"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.9...v4.3.10">4.3.10</a> (2017-10-12)<a class="headerlink" href="#4310-2017-10-12" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_43">Bug Fixes<a class="headerlink" href="#bug-fixes_43" title="Permanent link">&para;</a></h3>
+<ul>
+<li>link render issue after page refreshing (<a href="https://github.com/QingWei-Li/docsify/issues/276">#276</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/abd885e">abd885e</a>)</li>
+</ul>
+<p><a name="4.3.9"></a></p>
+<h2 id="439-2017-10-11"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.8...v4.3.9">4.3.9</a> (2017-10-11)<a class="headerlink" href="#439-2017-10-11" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_44">Bug Fixes<a class="headerlink" href="#bug-fixes_44" title="Permanent link">&para;</a></h3>
+<ul>
+<li>scroll issue in IE (<a href="https://github.com/QingWei-Li/docsify/issues/275">#275</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/3e94cb6">3e94cb6</a>)</li>
+</ul>
+<p><a name="4.3.8"></a></p>
+<h2 id="438-2017-10-07"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.7...v4.3.8">4.3.8</a> (2017-10-07)<a class="headerlink" href="#438-2017-10-07" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_45">Bug Fixes<a class="headerlink" href="#bug-fixes_45" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>slugify:</strong> GitHub compatible heading links, fixed <a href="https://github.com/QingWei-Li/docsify/issues/272">#272</a> (<a href="https://github.com/QingWei-Li/docsify/commit/9b4e666">9b4e666</a>)</li>
+</ul>
+<p><a name="4.3.7"></a></p>
+<h2 id="437-2017-10-02"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.6...v4.3.7">4.3.7</a> (2017-10-02)<a class="headerlink" href="#437-2017-10-02" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_46">Bug Fixes<a class="headerlink" href="#bug-fixes_46" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>slugify:</strong> GitHub compatible heading links, fixed <a href="https://github.com/QingWei-Li/docsify/issues/267">#267</a> (<a href="https://github.com/QingWei-Li/docsify/commit/c195d2d">c195d2d</a>)</li>
+</ul>
+<p><a name="4.3.6"></a></p>
+<h2 id="436-2017-09-21"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.5...v4.3.6">4.3.6</a> (2017-09-21)<a class="headerlink" href="#436-2017-09-21" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_47">Bug Fixes<a class="headerlink" href="#bug-fixes_47" title="Permanent link">&para;</a></h3>
+<ul>
+<li>style for codesponsor plugin (<a href="https://github.com/QingWei-Li/docsify/commit/08afec7">08afec7</a>)</li>
+</ul>
+<p><a name="4.3.5"></a></p>
+<h2 id="435-2017-09-20"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.4...v4.3.5">4.3.5</a> (2017-09-20)<a class="headerlink" href="#435-2017-09-20" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_48">Bug Fixes<a class="headerlink" href="#bug-fixes_48" title="Permanent link">&para;</a></h3>
+<ul>
+<li>missed symbol (<a href="https://github.com/QingWei-Li/docsify/issues/254">#254</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/6c702d3">6c702d3</a>)</li>
+</ul>
+<h3 id="features_23">Features<a class="headerlink" href="#features_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>plugin:</strong> add codesponsor plugin (<a href="https://github.com/QingWei-Li/docsify/commit/46ac4c3">46ac4c3</a>)</li>
+</ul>
+<p><a name="4.3.4"></a></p>
+<h2 id="434-2017-09-07"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.3...v4.3.4">4.3.4</a> (2017-09-07)<a class="headerlink" href="#434-2017-09-07" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_49">Bug Fixes<a class="headerlink" href="#bug-fixes_49" title="Permanent link">&para;</a></h3>
+<ul>
+<li>scroll position issue, fixed <a href="https://github.com/QingWei-Li/docsify/issues/234">#234</a> (<a href="https://github.com/QingWei-Li/docsify/commit/388ed3d">388ed3d</a>)</li>
+</ul>
+<p><a name="4.3.3"></a></p>
+<h2 id="433-2017-09-06"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.2...v4.3.3">4.3.3</a> (2017-09-06)<a class="headerlink" href="#433-2017-09-06" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_50">Bug Fixes<a class="headerlink" href="#bug-fixes_50" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>buble.css:</strong> tweaks code block style, fixed <a href="https://github.com/QingWei-Li/docsify/issues/249">#249</a> (<a href="https://github.com/QingWei-Li/docsify/commit/9d43051">9d43051</a>)</li>
+</ul>
+<h3 id="features_24">Features<a class="headerlink" href="#features_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add doc for react and vue demo box plugin (<a href="https://github.com/QingWei-Li/docsify/issues/247">#247</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/f0aca19">f0aca19</a>)</li>
+</ul>
+<p><a name="4.3.2"></a></p>
+<h2 id="432-2017-09-01"><a href="https://github.com/QingWei-Li/docsify/compare/v4.3.1...v4.3.2">4.3.2</a> (2017-09-01)<a class="headerlink" href="#432-2017-09-01" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_51">Bug Fixes<a class="headerlink" href="#bug-fixes_51" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sidebar highlight (<a href="https://github.com/QingWei-Li/docsify/commit/f82f419">f82f419</a>)</li>
+</ul>
+<h3 id="features_25">Features<a class="headerlink" href="#features_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add Edit on github plugin (thanks <a href="https://github.com/njleonzhang">@njleonzhang</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/a0e1ea8">a0e1ea8</a>)</li>
+</ul>
+<p><a name="4.3.1"></a></p>
+<h2 id="431-2017-08-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.9...v4.3.1">4.3.1</a> (2017-08-30)<a class="headerlink" href="#431-2017-08-30" title="Permanent link">&para;</a></h2>
+<h3 id="features_26">Features<a class="headerlink" href="#features_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>markdown:</strong> supports mermaid <a href="https://github.com/QingWei-Li/docsify/issues/137">#137</a> (<a href="https://github.com/QingWei-Li/docsify/commit/f4800e0">f4800e0</a>)</li>
+</ul>
+<p><a name="4.3.0"></a></p>
+<h1 id="430-2017-08-17"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.9...v4.3.0">4.3.0</a> (2017-08-17)<a class="headerlink" href="#430-2017-08-17" title="Permanent link">&para;</a></h1>
+<h3 id="features_27">Features<a class="headerlink" href="#features_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>markdown:</strong> supports mermaid <a href="https://github.com/QingWei-Li/docsify/issues/137">#137</a> (<a href="https://github.com/QingWei-Li/docsify/commit/f4800e0">f4800e0</a>)</li>
+</ul>
+<p><a name="4.2.9"></a></p>
+<h2 id="429-2017-08-15"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.8...v4.2.9">4.2.9</a> (2017-08-15)<a class="headerlink" href="#429-2017-08-15" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_52">Bug Fixes<a class="headerlink" href="#bug-fixes_52" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ensure document ready before init Docsify <a href="https://github.com/QingWei-Li/docsify/issues/233">#233</a></li>
+</ul>
+<p><a name="4.2.8"></a></p>
+<h2 id="428-2017-08-10"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.7...v4.2.8">4.2.8</a> (2017-08-10)<a class="headerlink" href="#428-2017-08-10" title="Permanent link">&para;</a></h2>
+<h3 id="features_28">Features<a class="headerlink" href="#features_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>compiler:</strong> support for setting target attribute for link, fixed <a href="https://github.com/QingWei-Li/docsify/issues/230">#230</a> (<a href="https://github.com/QingWei-Li/docsify/commit/7f270f9">7f270f9</a>)</li>
+</ul>
+<p><a name="4.2.7"></a></p>
+<h2 id="427-2017-08-05"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.4...v4.2.7">4.2.7</a> (2017-08-05)<a class="headerlink" href="#427-2017-08-05" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_53">Bug Fixes<a class="headerlink" href="#bug-fixes_53" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>release:</strong> release shell (<a href="https://github.com/QingWei-Li/docsify/commit/628e211">628e211</a>)</li>
+<li><strong>style:</strong> nowrap =&gt; pre-wrap, fixed <a href="https://github.com/QingWei-Li/docsify/issues/228">#228</a> (<a href="https://github.com/QingWei-Li/docsify/commit/a88252c">a88252c</a>)</li>
+</ul>
+<p><a name="4.2.6"></a></p>
+<h2 id="426-2017-07-27"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.4...v4.2.6">4.2.6</a> (2017-07-27)<a class="headerlink" href="#426-2017-07-27" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_54">Bug Fixes<a class="headerlink" href="#bug-fixes_54" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>css:</strong> hide the nav when the content has not yet been loaded (<a href="https://github.com/QingWei-Li/docsify/commit/1fa1619">1fa1619</a>)</li>
+<li><strong>release:</strong> release shell (<a href="https://github.com/QingWei-Li/docsify/commit/628e211">628e211</a>)</li>
+</ul>
+<p><a name="4.2.4"></a></p>
+<h2 id="424-2017-07-26"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.2...v4.2.4">4.2.4</a> (2017-07-26)<a class="headerlink" href="#424-2017-07-26" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_55">Bug Fixes<a class="headerlink" href="#bug-fixes_55" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>render:</strong> Remove getRootNode to be compatible with the lower version of Chrome, fixed <a href="https://github.com/QingWei-Li/docsify/issues/225">#225</a> (<a href="https://github.com/QingWei-Li/docsify/commit/b8dd346">b8dd346</a>)</li>
+</ul>
+<p><a name="4.2.3"></a></p>
+<h2 id="423-2017-07-26"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.2...v4.2.3">4.2.3</a> (2017-07-26)<a class="headerlink" href="#423-2017-07-26" title="Permanent link">&para;</a></h2>
+<h3 id="features_29">Features<a class="headerlink" href="#features_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>search:</strong> Supports the max depth of the search headline, fixed <a href="https://github.com/QingWei-Li/docsify/issues/223">#223</a>, resolve <a href="https://github.com/QingWei-Li/docsify/issues/129">#129</a> (<a href="https://github.com/QingWei-Li/docsify/commit/b7b589b">b7b589b</a>)</li>
+</ul>
+<p><a name="4.2.2"></a></p>
+<h2 id="422-2017-07-24"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.1...v4.2.2">4.2.2</a> (2017-07-24)<a class="headerlink" href="#422-2017-07-24" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_56">Bug Fixes<a class="headerlink" href="#bug-fixes_56" title="Permanent link">&para;</a></h3>
+<ul>
+<li>style rerender due to setting themeColor (<a href="https://github.com/QingWei-Li/docsify/commit/17ff3d1">17ff3d1</a>)</li>
+</ul>
+<p><a name="4.2.1"></a></p>
+<h2 id="421-2017-07-19"><a href="https://github.com/QingWei-Li/docsify/compare/v4.2.0...v4.2.1">4.2.1</a> (2017-07-19)<a class="headerlink" href="#421-2017-07-19" title="Permanent link">&para;</a></h2>
+<ul>
+<li>give the navbar some line-height (#216)</li>
+<li>Remove unnecessary moduleName option from rollup config for plugins (#209)</li>
+</ul>
+<p><a name="4.2.0"></a></p>
+<h1 id="420-2017-07-10"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.14...v4.2.0">4.2.0</a> (2017-07-10)<a class="headerlink" href="#420-2017-07-10" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_57">Bug Fixes<a class="headerlink" href="#bug-fixes_57" title="Permanent link">&para;</a></h3>
+<ul>
+<li>not found page (<a href="https://github.com/QingWei-Li/docsify/commit/9af8559">9af8559</a>)</li>
+</ul>
+<h3 id="features_30">Features<a class="headerlink" href="#features_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>alias option supports regexp, resolve <a href="https://github.com/QingWei-Li/docsify/issues/183">#183</a> (<a href="https://github.com/QingWei-Li/docsify/commit/c4aa22c">c4aa22c</a>)</li>
+<li>ignore to compiled link, fixed <a href="https://github.com/QingWei-Li/docsify/issues/203">#203</a> (<a href="https://github.com/QingWei-Li/docsify/issues/204">#204</a>) (<a href="https://github.com/QingWei-Li/docsify/commit/2e00f4c">2e00f4c</a>)</li>
+</ul>
+<p><a name="4.1.14"></a></p>
+<h2 id="4114-2017-06-24"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.13...v4.1.14">4.1.14</a> (2017-06-24)<a class="headerlink" href="#4114-2017-06-24" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_58">Bug Fixes<a class="headerlink" href="#bug-fixes_58" title="Permanent link">&para;</a></h3>
+<ul>
+<li>get file path, fixed jrappen/sublime-distractionless/commit/81bfadd391428823191cc03eca956a2312e04d13#commitcomment-22427070 (<a href="https://github.com/QingWei-Li/docsify/commit/e8117e5">e8117e5</a>), closes <a href="https://github.com/jrappen/sublime-distractionless/commit/81bfadd391428823191cc03eca956a2312e04d13/issues/commitcomment-22427070">jrappen/sublime-distractionless/commit/81bfadd391428823191cc03eca956a2312e04d13#commitcomment-22427070</a></li>
+</ul>
+<h3 id="features_31">Features<a class="headerlink" href="#features_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add context attribute, fixed <a href="https://github.com/QingWei-Li/docsify/issues/191">#191</a> (<a href="https://github.com/QingWei-Li/docsify/commit/ce0e9ac">ce0e9ac</a>)</li>
+</ul>
+<p><a name="4.1.13"></a></p>
+<h2 id="4113-2017-06-11"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.12...v4.1.13">4.1.13</a> (2017-06-11)<a class="headerlink" href="#4113-2017-06-11" title="Permanent link">&para;</a></h2>
+<p><a name="4.1.12"></a></p>
+<h2 id="4112-2017-06-03"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.11...v4.1.12">4.1.12</a> (2017-06-03)<a class="headerlink" href="#4112-2017-06-03" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_59">Bug Fixes<a class="headerlink" href="#bug-fixes_59" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>render:</strong> subtitle in side bar shows undefined, fixed <a href="https://github.com/QingWei-Li/docsify/issues/182">#182</a> (<a href="https://github.com/QingWei-Li/docsify/commit/d087d57">d087d57</a>)</li>
+</ul>
+<p><a name="4.1.11"></a></p>
+<h2 id="4111-2017-06-02"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.10...v4.1.11">4.1.11</a> (2017-06-02)<a class="headerlink" href="#4111-2017-06-02" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_60">Bug Fixes<a class="headerlink" href="#bug-fixes_60" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>compiler:</strong> force reset toc when rendering sidebar fixed <a href="https://github.com/QingWei-Li/docsify/issues/181">#181</a> (<a href="https://github.com/QingWei-Li/docsify/commit/ccf4c7c">ccf4c7c</a>)</li>
+<li><strong>render:</strong> autoHeader does not work (<a href="https://github.com/QingWei-Li/docsify/commit/1304d2e">1304d2e</a>)</li>
+</ul>
+<p><a name="4.1.10"></a></p>
+<h2 id="4110-2017-06-02"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.9...v4.1.10">4.1.10</a> (2017-06-02)<a class="headerlink" href="#4110-2017-06-02" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_61">Bug Fixes<a class="headerlink" href="#bug-fixes_61" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>hash:</strong> hash routing crashes when url has querystring (<a href="https://github.com/QingWei-Li/docsify/commit/6d48ce1">6d48ce1</a>)</li>
+</ul>
+<p><a name="4.1.9"></a></p>
+<h2 id="419-2017-05-31"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.8...v4.1.9">4.1.9</a> (2017-05-31)<a class="headerlink" href="#419-2017-05-31" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_62">Bug Fixes<a class="headerlink" href="#bug-fixes_62" title="Permanent link">&para;</a></h3>
+<ul>
+<li>can't render toc on first load (<a href="https://github.com/QingWei-Li/docsify/commit/d9b487e">d9b487e</a>)</li>
+<li><strong>lifecycle:</strong> continue to handle data (<a href="https://github.com/QingWei-Li/docsify/commit/955d3d5">955d3d5</a>)</li>
+<li><strong>render:</strong> broken name link, fixed <a href="https://github.com/QingWei-Li/docsify/issues/167">#167</a> (<a href="https://github.com/QingWei-Li/docsify/commit/91b66a5">91b66a5</a>)</li>
+</ul>
+<p><a name="4.1.8"></a></p>
+<h2 id="418-2017-05-31"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.7...v4.1.8">4.1.8</a> (2017-05-31)<a class="headerlink" href="#418-2017-05-31" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_63">Bug Fixes<a class="headerlink" href="#bug-fixes_63" title="Permanent link">&para;</a></h3>
+<ul>
+<li>auto replace version (<a href="https://github.com/QingWei-Li/docsify/commit/22b50f0">22b50f0</a>)</li>
+<li>update edit button demo (<a href="https://github.com/QingWei-Li/docsify/commit/ec887c1">ec887c1</a>)</li>
+</ul>
+<h3 id="features_32">Features<a class="headerlink" href="#features_32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>add edit button demo (<a href="https://github.com/QingWei-Li/docsify/commit/a64cee1">a64cee1</a>)</li>
+<li>add edit button demo, close <a href="https://github.com/QingWei-Li/docsify/issues/162">#162</a> (<a href="https://github.com/QingWei-Li/docsify/commit/036fdac">036fdac</a>)</li>
+</ul>
+<p><a name="4.1.7"></a></p>
+<h2 id="417-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.6...v4.1.7">4.1.7</a> (2017-05-30)<a class="headerlink" href="#417-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_64">Bug Fixes<a class="headerlink" href="#bug-fixes_64" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ssr:</strong> clean files (<a href="https://github.com/QingWei-Li/docsify/commit/0014895">0014895</a>)</li>
+</ul>
+<p><a name="4.1.6"></a></p>
+<h2 id="416-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.5...v4.1.6">4.1.6</a> (2017-05-30)<a class="headerlink" href="#416-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_65">Bug Fixes<a class="headerlink" href="#bug-fixes_65" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ssr:</strong> add debug (<a href="https://github.com/QingWei-Li/docsify/commit/6b9e092">6b9e092</a>)</li>
+</ul>
+<p><a name="4.1.5"></a></p>
+<h2 id="415-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.4...v4.1.5">4.1.5</a> (2017-05-30)<a class="headerlink" href="#415-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_66">Bug Fixes<a class="headerlink" href="#bug-fixes_66" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ssr:</strong> missing package (<a href="https://github.com/QingWei-Li/docsify/commit/6db8c9e">6db8c9e</a>)</li>
+</ul>
+<p><a name="4.1.4"></a></p>
+<h2 id="414-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.3...v4.1.4">4.1.4</a> (2017-05-30)<a class="headerlink" href="#414-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_67">Bug Fixes<a class="headerlink" href="#bug-fixes_67" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ssr:</strong> file path (<a href="https://github.com/QingWei-Li/docsify/commit/79a83bc">79a83bc</a>)</li>
+</ul>
+<p><a name="4.1.3"></a></p>
+<h2 id="413-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.2...v4.1.3">4.1.3</a> (2017-05-30)<a class="headerlink" href="#413-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_68">Bug Fixes<a class="headerlink" href="#bug-fixes_68" title="Permanent link">&para;</a></h3>
+<ul>
+<li>update babel config (<a href="https://github.com/QingWei-Li/docsify/commit/9825db4">9825db4</a>)</li>
+</ul>
+<p><a name="4.1.2"></a></p>
+<h2 id="412-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.1...v4.1.2">4.1.2</a> (2017-05-30)<a class="headerlink" href="#412-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_69">Bug Fixes<a class="headerlink" href="#bug-fixes_69" title="Permanent link">&para;</a></h3>
+<ul>
+<li>update babel config (<a href="https://github.com/QingWei-Li/docsify/commit/80dba19">80dba19</a>)</li>
+</ul>
+<p><a name="4.1.1"></a></p>
+<h2 id="411-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.1.0...v4.1.1">4.1.1</a> (2017-05-30)<a class="headerlink" href="#411-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_70">Bug Fixes<a class="headerlink" href="#bug-fixes_70" title="Permanent link">&para;</a></h3>
+<ul>
+<li>build for ssr package (<a href="https://github.com/QingWei-Li/docsify/commit/4cb20a5">4cb20a5</a>)</li>
+<li>remove history mode (<a href="https://github.com/QingWei-Li/docsify/commit/0e74e6c">0e74e6c</a>)</li>
+</ul>
+<p><a name="4.1.0"></a></p>
+<h1 id="410-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.0.2...v4.1.0">4.1.0</a> (2017-05-30)<a class="headerlink" href="#410-2017-05-30" title="Permanent link">&para;</a></h1>
+<p><a name="4.0.2"></a></p>
+<h2 id="402-2017-05-30"><a href="https://github.com/QingWei-Li/docsify/compare/v4.0.1...v4.0.2">4.0.2</a> (2017-05-30)<a class="headerlink" href="#402-2017-05-30" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_71">Bug Fixes<a class="headerlink" href="#bug-fixes_71" title="Permanent link">&para;</a></h3>
+<ul>
+<li>basePath for history mode (<a href="https://github.com/QingWei-Li/docsify/commit/fc1cd3f">fc1cd3f</a>)</li>
+</ul>
+<p><a name="4.0.1"></a></p>
+<h2 id="401-2017-05-29"><a href="https://github.com/QingWei-Li/docsify/compare/v4.0.0...v4.0.1">4.0.1</a> (2017-05-29)<a class="headerlink" href="#401-2017-05-29" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_72">Bug Fixes<a class="headerlink" href="#bug-fixes_72" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ssr:</strong> remove context (<a href="https://github.com/QingWei-Li/docsify/commit/4626157">4626157</a>)</li>
+<li>lint (<a href="https://github.com/QingWei-Li/docsify/commit/b764b6e">b764b6e</a>)</li>
+</ul>
+<p><a name="4.0.0"></a></p>
+<h1 id="400-2017-05-29"><a href="https://github.com/QingWei-Li/docsify/compare/v3.7.3...v4.0.0">4.0.0</a> (2017-05-29)<a class="headerlink" href="#400-2017-05-29" title="Permanent link">&para;</a></h1>
+<h3 id="bug-fixes_73">Bug Fixes<a class="headerlink" href="#bug-fixes_73" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>render:</strong> init event in ssr (<a href="https://github.com/QingWei-Li/docsify/commit/eba1c98">eba1c98</a>)</li>
+<li>lint (<a href="https://github.com/QingWei-Li/docsify/commit/1f4514d">1f4514d</a>)</li>
+</ul>
+<h3 id="features_33">Features<a class="headerlink" href="#features_33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>finish ssr (<a href="https://github.com/QingWei-Li/docsify/commit/3444884">3444884</a>)</li>
+<li>init ocsify-server-renderer (<a href="https://github.com/QingWei-Li/docsify/commit/6dea685">6dea685</a>)</li>
+<li>support history mode (<a href="https://github.com/QingWei-Li/docsify/commit/f095eb8">f095eb8</a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
