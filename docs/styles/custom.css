@@ -1,0 +1,33 @@
+/* Limit the sidebar navigation width */
+.md-nav__item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px; /* Adjust this value as needed */
+}
+
+/* Display full name on hover */
+.md-nav__item:hover {
+  overflow: visible;
+  white-space: normal;
+  background-color: #f5f5f5; /* Optional hover background */
+  z-index: 10; /* Ensure it shows above other elements */
+}
+
+/* Adjust the padding to ensure items fit properly */
+.md-nav__link {
+  padding: 5px 15px;
+}
+
+.md-header__title img {
+  max-height: 100px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: #016FD0;
+  color: #FFFFFF;
+  text-align: center;
+}

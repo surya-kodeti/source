@@ -1,0 +1,23 @@
+site_name: Documentation Portal
+site_url: https://surya-kodeti.github.io/source
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: white
+    scheme: default
+  logo: images/amex.png
+extra_css:
+- styles/custom.css
+plugins:
+- search
+nav: []
+markdown_extensions:
+- admonition
+- codehilite:
+    guess_lang: false
+- toc:
+    permalink: true
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.highlight
