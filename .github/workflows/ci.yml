@@ -2,8 +2,10 @@ name: Deploy MkDocs Site to GitHub Pages
 
 on:
   push:
+    paths:
+      - "docs/**"
     branches:
-      - mkdocs_server  # Trigger deployment on changes to the mkdocs_server branch
+      - main  
   workflow_dispatch:  # Allow manual deployment trigger
 
 permissions:
