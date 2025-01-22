@@ -22,10 +22,10 @@ jobs:
           cat repo_list.txt
 
       # Step 2: Checkout the mkdocs_server Branch
-      - name: Checkout mkdocs_server Branch
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with:
-          ref: mkdocs_server
+          ref: main
           token: ${{ secrets.REMOTE_REPO_TOKEN }}
           path: remote-repo
 
@@ -69,5 +69,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Update Markdown files from given repositories"
-            git push origin mkdocs_server
+            git push origin main
           fi
